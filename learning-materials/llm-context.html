@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="zh-CN" data-page-node-id="Fy07vYctAIYAvmlrLA5zPQ" data-dm-ref="1"><head data-page-node-id="lnZ9A1lYmJkzq4e9AHj9ps">
+<meta charset="UTF-8" data-page-node-id="EwpgWokob3lbQV1omMJBHR">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" data-page-node-id="9A14bREGFQCYqSxN7LzXEU"><title data-page-node-id="F3cuBxGMdep91T7HhGymXx" data-pnid-children="KxHlaEI2cAadgGOYGYchlV" style="box-sizing:border-box;margin:0;padding:0">大模型的上下文（LLM Context）学习资料</title>
 <title>大模型的上下文（LLM Context）学习资料</title>
 <style>
   :root{--ink:#1f2328;--muted:#656d76;--line:#d8dee4;--accent:#534ab7;--accent-soft:#eeedfe;--teal:#0f6e56;--teal-soft:#e1f5ee;--amber:#854f0b;--amber-soft:#faeeda;--card:#ffffff;--bg:#f6f8fa}
@@ -44,54 +43,54 @@
   .footer{color:var(--muted);font-size:12.5px;text-align:center;margin-top:8px}
   .pill{display:inline-block;font-size:12px;color:var(--muted);background:#eef1f4;border-radius:10px;padding:1px 10px;margin-right:6px}
 </style>
-</head>
-<body>
-<div class="wrap">
+<style id="__dm_no_drag_style__">* { -webkit-user-drag: none !important; }</style><style id="__dm_bindable_badge_style__">[data-sp-bindable="database"]{outline:1px dashed #0088ff;outline-offset:2px;border-radius:4px;}[data-sp-bindable="database"] *{pointer-events:none !important;transition:none !important;animation:none !important;}[data-sp-bindable="database"]{transition:none !important;animation:none !important;}</style></head>
+<body data-page-node-id="DzrBKjv9Au5Uj60i93OhQ1" style="position: relative;">
+<div class="wrap" data-page-node-id="XGbqbwJrDMi6z5tQVdIrBD">
 
-<header class="hero">
-  <h1>大模型的上下文（LLM Context）学习资料</h1>
-  <div class="sub">《大数据与人工智能》课程 · 概念学习资料 · 由 concept-learning-generator 技能生成</div>
-  <span class="badge">上下文窗口</span><span class="badge">Context Window</span><span class="badge">上下文工程</span><span class="badge">In-Context Learning</span>
-  <div class="caliber"><strong>定义口径说明：</strong>本资料的"上下文"指<strong>大模型单次推理时能"看见"并赖以思考的全部输入信息</strong>，其大小上限即<strong>上下文窗口（context window）</strong>，以 token 计量；并延伸到管理这些信息的工程实践（上下文工程，context engineering）。它不等于自然语言中的"词义上下文"，也不等同于"聊天记录"这一单一成分。</div>
+<header class="hero" data-page-node-id="BQOFdLZN5R2B5HACsPxSO3">
+  <h1 data-page-node-id="7bdoxAwLV2iuCwggujUG2r">大模型的上下文（LLM Context）学习资料</h1>
+  <div class="sub" data-page-node-id="lAsFaCKAhRJSe3ZEVCjZs9">《大数据与人工智能》课程 · 概念学习资料 · 由 concept-learning-generator 技能生成</div>
+  <span class="badge" data-page-node-id="2mkvs8EpDxTDZgxOWuWvDj">上下文窗口</span><span class="badge" data-page-node-id="xfX3BHCAP7LMNHzgeL6Q8e">Context Window</span><span class="badge" data-page-node-id="YtKAv1fs88OkncjZXxhlre">上下文工程</span><span class="badge" data-page-node-id="VBadkxLfjQlhNriUEWsP8p">In-Context Learning</span>
+  <div class="caliber" data-page-node-id="15uJg348E2X6aMAndnj8z1"><strong data-page-node-id="CiYbPHVJMRgiYxIdeOnFF6">定义口径说明：</strong>本资料的"上下文"指<strong data-page-node-id="PPWOwbCkG5ZDpoD9Myu6dH">大模型单次推理时能"看见"并赖以思考的全部输入信息</strong>，其大小上限即<strong data-page-node-id="SgtBwP2tYIkUo7P8pDz8eD">上下文窗口（context window）</strong>，以 token 计量；并延伸到管理这些信息的工程实践（上下文工程，context engineering）。它不等于自然语言中的"词义上下文"，也不等同于"聊天记录"这一单一成分。</div>
 </header>
 
-<nav class="toc">
-  <h2>目录</h2>
-  <ol>
-    <li><a href="#goals">学习目标</a></li>
-    <li><a href="#s1">1. 个人理解解释</a></li>
-    <li><a href="#s2">2. 核心机制 / 组成</a></li>
-    <li><a href="#s3">3. 真实落地应用场景</a></li>
-    <li><a href="#s4">4. 易混淆点 &amp; 使用边界</a></li>
-    <li><a href="#s5">5. 可查证的正规参考来源链接</a></li>
-    <li><a href="#s6">6. 核心思考题</a></li>
-    <li><a href="#s7">7. 自测小题（附答案）</a></li>
+<nav class="toc" data-page-node-id="qLqCxFs2bjaZKUTIpYIYDL">
+  <h2 data-page-node-id="ROEMWnWA2PUDK7gHmC8yrp">目录</h2>
+  <ol data-page-node-id="JUzcAkIEmUcnOye5dQPO2H">
+    <li data-page-node-id="oOFxaXP2edytzBFkD4lZr2"><a href="#goals" data-page-node-id="F22zwBinEPuVlMWThVbdNy">学习目标</a></li>
+    <li data-page-node-id="YgcQy6h2l3bekFLctlLQCb"><a href="#s1" data-page-node-id="kEk7D6kn4iOBnPmFP4C4IX">1. 个人理解解释</a></li>
+    <li data-page-node-id="419urFQr7AQ62DlNxRUtIZ"><a href="#s2" data-page-node-id="Mx7qduK1GwtZqklJWYUHYD">2. 核心机制 / 组成</a></li>
+    <li data-page-node-id="mXm6SORBntqwnLcjqUxJVj"><a href="#s3" data-page-node-id="iO3nCvdmN8jOFvQuALAipv">3. 真实落地应用场景</a></li>
+    <li data-page-node-id="zNP7oFTwFBnbTpVNYCtQzA"><a href="#s4" data-page-node-id="LnlqESy95Aj0WATtfgIgDH">4. 易混淆点 &amp; 使用边界</a></li>
+    <li data-page-node-id="mICCGigUGy6eD6f02CfVF9"><a href="#s5" data-page-node-id="fWHrsCFjkJwKLIHvSRgg7U">5. 可查证的正规参考来源链接</a></li>
+    <li data-page-node-id="A3LSykEswcbpJlmIHlXYIX"><a href="#s6" data-page-node-id="tj71MCJmBU3gVOjIyxH3Yo">6. 核心思考题</a></li>
+    <li data-page-node-id="5frq8VAFS768gGGklUOYwQ"><a href="#s7" data-page-node-id="E5YV2Ggq20uTd5QzoGQBR6">7. 自测小题（附答案）</a></li>
   </ol>
 </nav>
 
-<section class="card" id="goals">
-  <h2>学习目标</h2>
-  <ul>
-    <li>学完能够<strong>说清上下文窗口是什么</strong>：由哪几类内容构成、以什么单位计量、与输出预算的关系。</li>
-    <li>学完能够<strong>解释"上下文为什么不能无限长"</strong>：自注意力的平方复杂度、"注意力预算"与 context rot 现象。</li>
-    <li>学完能够<strong>描述 Lost in the Middle 现象</strong>，并据此对 RAG 检索结果的排布给出改进建议。</li>
-    <li>学完能够<strong>列举管理上下文的实用手段</strong>：检索、压缩（compaction）、结构化笔记、子代理架构。</li>
+<section class="card" id="goals" data-page-node-id="RHmxoCwPvFmF3GRqObWNKw">
+  <h2 data-page-node-id="DsQDzjOmIpPKUlUIA8YwVG">学习目标</h2>
+  <ul data-page-node-id="G8X851KVHNfBM9lFkleCnx">
+    <li data-page-node-id="fMBHhvPfjsCXpuSYlSCfGa">学完能够<strong data-page-node-id="qzmMJaJbWIQLq0AuPvRjEr">说清上下文窗口是什么</strong>：由哪几类内容构成、以什么单位计量、与输出预算的关系。</li>
+    <li data-page-node-id="kfW7bnPXzxDbzPwi2HIUzr">学完能够<strong data-page-node-id="vj83itqOqPiZKJy8Ec0lVN">解释"上下文为什么不能无限长"</strong>：自注意力的平方复杂度、"注意力预算"与 context rot 现象。</li>
+    <li data-page-node-id="ai6Ql1AoSfb89IWj6ucE3C">学完能够<strong data-page-node-id="cltAbnbwcYl3Hhe4h7bXVr">描述 Lost in the Middle 现象</strong>，并据此对 RAG 检索结果的排布给出改进建议。</li>
+    <li data-page-node-id="c6VoPfdX899wrojZgtTsgN">学完能够<strong data-page-node-id="llraeO5DAsCwH0H62YUFy9">列举管理上下文的实用手段</strong>：检索、压缩（compaction）、结构化笔记、子代理架构。</li>
   </ul>
 </section>
 
-<section class="card" id="s1">
-  <h2>1. 个人理解解释</h2>
-  <p><strong>一句话大白话定义：</strong>上下文（context）就是大模型单次推理时"能看见、能拿来思考"的全部信息；上下文窗口（context window）就是这个"视野范围"的大小上限——超出窗口的内容，模型这次推理完全感知不到。</p>
-  <div class="analogy"><strong>类比：模型是一张工作台。</strong>模型参数 = 你已经背熟的技能和知识（训练完就固定，不随任务变化）；<strong>上下文 = 你面前的工作台</strong>——桌面上摊开的资料、任务单、工具说明书，全部摆在你眼前供你随时翻看。工作台只有那么大：桌满了，摆不下的只能<strong>凭记忆答</strong>（参数知识，可能过时或记错），或者<strong>起身去书架取</strong>（检索/RAG/工具调用）。Anthropic 把这称为模型有限的<strong>"注意力预算"</strong>——像人的工作记忆，摊开的资料越多，摊在每份上的注意力就越少。</div>
-  <h3>在 AI 技术版图中的位置</h3>
-  <p>上下文是大模型应用的"主战场"：提示词工程（Prompt Engineering）管的是"往桌上放什么指令"；RAG 管"从书架取什么放上来"；多轮对话与 Agent 的记忆管理管"桌上东西怎么收拾、怎么腾地方"。2025 年起，Anthropic 把这套实践正式命名为<strong>上下文工程（context engineering）</strong>——提示词工程的演进形态：核心目标是在有限窗口内，找出<strong>最小化的高信号 token 集合</strong>来最大化模型表现。</p>
+<section class="card" id="s1" data-page-node-id="JZsoiBJYIyECmd7OwOQfwb">
+  <h2 data-page-node-id="8zEaFYW0xlAFF1EKs7As9z">1. 个人理解解释</h2>
+  <p data-page-node-id="VbKzgsO36fllskWrrSCCD1" style="">我的理解：上下文（context）是大模型单次推理过程中，可以读取并用来分析思考的全部信息；而上下文窗口（context window）就是这份信息容量的上限。一旦内容超出窗口大小，模型在本次推理里就无法识别这部分内容。</p>
+  <div class="analogy" data-page-node-id="lT8Iia8jMUrVngIGKEHCT3" style="cursor: text; font-weight: 700; font-style: normal;"><b>类比：模型是一张工作台。模型参数 = 你已经背熟的技能和知识（训练完就固定，不随任务变化）；上下文 = 你面前的工作台——桌面上摊开的资料、任务单、工具说明书，全部摆在你眼前供你随时翻看。工作台只有那么大：摆满了，摆不下的只能凭记忆答（参数知识，可能过时或记错），或者起身去书架取（检索/RAG/工具调用）。Anthropic把这称为模型有限的“注意力预算”——像人的工作记忆，摊开的资料越多，摊在每份上的注意力就越少。</b></div>
+  <h3 data-page-node-id="B7MOd20EnNhx7mPklGRFXI">在 AI 技术版图中的位置</h3>
+  <p data-page-node-id="T06fFeiEWtVhrAKeCwIO58">上下文是大模型应用的"主战场"：提示词工程（Prompt Engineering）管的是"往桌上放什么指令"；RAG 管"从书架取什么放上来"；多轮对话与 Agent 的记忆管理管"桌上东西怎么收拾、怎么腾地方"。2025 年起，Anthropic 把这套实践正式命名为<strong data-page-node-id="gVS8dsskIGhjCKIyuUV1w5">上下文工程（context engineering）</strong>——提示词工程的演进形态：核心目标是在有限窗口内，找出<strong data-page-node-id="0fEjBh4WQwB8hJ5UMOIMmi">最小化的高信号 token 集合</strong>来最大化模型表现。</p>
 </section>
 
-<section class="card" id="s2">
-  <h2>2. 核心机制 / 组成</h2>
-  <h3>窗口里装什么</h3>
-  <p>一次 API 调用的上下文通常由以下部分叠加而成（不同厂商实现细节以官方文档为准）：</p>
-  <pre>┌─ 上下文窗口（一次推理的"全部视野"）────────────┐
+<section class="card" id="s2" data-page-node-id="Mfzvtxf3NMFYdd4mDne0W4">
+  <h2 data-page-node-id="auaEf1InLrGShhbtMcOg2H">2. 核心机制 / 组成</h2>
+  <h3 data-page-node-id="qSW5oK9re58XOCpArRQDlw">窗口里装什么</h3>
+  <p data-page-node-id="JWevisJbh70UhFy9ZMXPVS">一次 API 调用的上下文通常由以下部分叠加而成（不同厂商实现细节以官方文档为准）：</p>
+  <pre data-page-node-id="OsLD7FDYiqbXZKEtc8VFJR">┌─ 上下文窗口（一次推理的"全部视野"）────────────┐
 │ system prompt   全局指令与人设                  │
 │ 对话历史        历轮 user / assistant 消息       │
 │ 检索内容        RAG 命中的片段、文件内容          │
@@ -99,95 +98,97 @@
 │ 本轮输入        用户刚说的话                     │
 │ ─────── 输出预算（回复也在同一个窗口里生成）─── │
 └──────────────────────────────────────────────┘</pre>
-  <p>计量单位是 <strong>token</strong>（模型分词后的最小单元）：粗略地，1 个英文单词 ≈ 1.3 个 token，1 个汉字 ≈ 1~2 个 token——具体取决于各家 tokenizer，<strong>不要按字符数心算，要用官方计数器</strong>。输入与输出通常共享同一个窗口预算：窗口 128K 不代表能"读 128K 再写 128K"。</p>
-  <h3>为什么上限不能随便加长</h3>
-  <ul>
-    <li><strong>平方复杂度（机制根源）</strong>：Transformer 的自注意力让每个 token 都与所有 token 两两交互（出自《Attention Is All You Need》，2017）——长度翻倍，注意力计算与显存约翻四倍，这就是长上下文"贵且慢"的底层原因。</li>
-    <li><strong>注意力稀释（效果根源）</strong>：Anthropic 在 2025 年的上下文工程博文中指出，受架构与<strong>"上下文腐烂"（context rot）</strong>影响，token 越多、每份信息分到的注意力越少——窗口标称再大，塞太满表现照样掉。</li>
+  <p data-page-node-id="oBQQ0wwnVCQDrBVChZl5RR">计量单位是 <strong data-page-node-id="PJtHjrR4dbCRKvxmDDIHBu">token</strong>（模型分词后的最小单元）：粗略地，1 个英文单词 ≈ 1.3 个 token，1 个汉字 ≈ 1~2 个 token——具体取决于各家 tokenizer，<strong data-page-node-id="HPorsfvfA3tom8vIWfPI1I">不要按字符数心算，要用官方计数器</strong>。输入与输出通常共享同一个窗口预算：窗口 128K 不代表能"读 128K 再写 128K"。</p>
+  <h3 data-page-node-id="Q8HP92UuCKGVxyTP1TeGGL">为什么上限不能随便加长</h3>
+  <ul data-page-node-id="suQA7gHX0nT2rEO41DrwrG">
+    <li data-page-node-id="1pEuQEDQCFMbgWXbvCcOe1"><strong data-page-node-id="7e3A5jByBeAB20AvtxMkWP">平方复杂度（机制根源）</strong>：Transformer 的自注意力让每个 token 都与所有 token 两两交互（出自《Attention Is All You Need》，2017）——长度翻倍，注意力计算与显存约翻四倍，这就是长上下文"贵且慢"的底层原因。</li>
+    <li data-page-node-id="soaEaLoGH8fsb8XCextgYz"><strong data-page-node-id="8YPihidFLHDEVthAQilbTz">注意力稀释（效果根源）</strong>：Anthropic 在 2025 年的上下文工程博文中指出，受架构与<strong data-page-node-id="8BsGtItltJRnvYd6K4QP4X">"上下文腐烂"（context rot）</strong>影响，token 越多、每份信息分到的注意力越少——窗口标称再大，塞太满表现照样掉。</li>
   </ul>
-  <h3>关键现象：Lost in the Middle</h3>
-  <div class="quote">Liu et al.（TACL 2023）在多文档问答与键值检索实验中发现：模型对<strong>开头和结尾</strong>的信息利用最好，<strong>位于长上下文中部的关键信息极易被忽略</strong>——呈现 U 形曲线，即便是宣称支持长窗口的模型也存在。</div>
-  <p>工程启示：把<strong>最重要的指令和材料放开头或结尾</strong>；RAG 命中的片段按相关性排序时，别把最关键的那条埋在中间。</p>
-  <h3>长上下文与上下文工程</h3>
-  <p>各家通过位置编码扩展（如 RoPE 插值、YaRN）、KV Cache 复用等技术把窗口从数万 token 推到百万级（具体数字演进极快，以各模型官方文档为准）。但窗口变大 ≠ 问题解决——Anthropic 给长时程任务开出三招：<strong>压缩</strong>（compaction，把旧对话总结后重开窗口）、<strong>结构化笔记</strong>（agentic memory，用 NOTES.md/记忆工具把关键事实持久化）、<strong>子代理架构</strong>（sub-agent 深入探索后只把精炼摘要带回主上下文）。此外，ICL（上下文学习，in-context learning）本身就是"写进窗口的临时教学"：几个 few-shot 示例不更新任何参数，就能改变模型行为。</p>
+  <h3 data-page-node-id="vmARFzZC7JIrh3cAEtJKhI">关键现象：Lost in the Middle</h3>
+  <div class="quote" data-page-node-id="tPn3SkZknpIcV4qOnquHdf">Liu et al.（TACL 2023）在多文档问答与键值检索实验中发现：模型对<strong data-page-node-id="6bCLGwEmaFQFIPgLE7l899">开头和结尾</strong>的信息利用最好，<strong data-page-node-id="XhPjW9FVGENcDHp3VjX5Uc">位于长上下文中部的关键信息极易被忽略</strong>——呈现 U 形曲线，即便是宣称支持长窗口的模型也存在。</div>
+  <p data-page-node-id="uBpSJGCIxcWY8cyRBIUWua">工程启示：把<strong data-page-node-id="NYiWtltFfZHa1YWiPXBjBU">最重要的指令和材料放开头或结尾</strong>；RAG 命中的片段按相关性排序时，别把最关键的那条埋在中间。</p>
+  <h3 data-page-node-id="aJfSFn8dl8ZhOVSBu6TLn0">长上下文与上下文工程</h3>
+  <p data-page-node-id="JqnyDN9S3TMn1N6kKjCls7">各家通过位置编码扩展（如 RoPE 插值、YaRN）、KV Cache 复用等技术把窗口从数万 token 推到百万级（具体数字演进极快，以各模型官方文档为准）。但窗口变大 ≠ 问题解决——Anthropic 给长时程任务开出三招：<strong data-page-node-id="Io6BBsZnsyRnBDlgf1UVIU">压缩</strong>（compaction，把旧对话总结后重开窗口）、<strong data-page-node-id="jMJqwsw0LlKcCPCAUVZjht">结构化笔记</strong>（agentic memory，用 NOTES.md/记忆工具把关键事实持久化）、<strong data-page-node-id="1z7PFyECDQqFqhbCHXmm9P">子代理架构</strong>（sub-agent 深入探索后只把精炼摘要带回主上下文）。此外，ICL（上下文学习，in-context learning）本身就是"写进窗口的临时教学"：几个 few-shot 示例不更新任何参数，就能改变模型行为。</p>
 </section>
 
-<section class="card" id="s3">
-  <h2>3. 真实落地应用场景</h2>
-  <ol>
-    <li><strong>长文档问答与合同审阅</strong><br>把整份合同/长报告直接放入窗口让模型通读。实践中要配合两条：关键条款优先放窗口首尾（对抗 Lost in the Middle）；超长文档先检索定位再精读局部，而不是无差别全塞。</li>
-    <li><strong>多轮对话的历史管理</strong><br>聊天记录逐轮增长，逼近上限后必须治理：滑动窗口截断、对旧轮次做摘要压缩、把用户关键偏好写入结构化笔记——这正是各家"记忆"功能的底层逻辑。</li>
-    <li><strong>RAG 与长上下文的组合</strong><br>两者不是替代关系：检索负责"挑重点+保时效"，长窗口负责"容得下"。Anthropic 在上下文工程博文中总结的 <strong>just-in-time 检索</strong>是好范式：Claude Code 不预载全部代码，而是用文件路径与 grep <strong>按需加载</strong>相关文件，窗口里只留当前需要的。</li>
-    <li><strong>Agent 的长时程记忆</strong><br>跑几小时的智能体无法把全部历史塞进窗口：用压缩重开窗口、用文件/记忆工具持久化任务状态、用子代理分工探索——这三种手段已成为 Agent 框架的标准配置（同见 Anthropic 博文）。</li>
+<section class="card" id="s3" data-page-node-id="7PBGdwJxAgDNrS7NCDTwV7">
+  <h2 data-page-node-id="jR9pJZ2rEV38ziaHG6dGxF">3. 真实落地应用场景</h2>
+  <ol data-page-node-id="4pXAufTljWPJs3W75unG8W">
+    <li data-page-node-id="DVqRxwtRcrTfEAoJUdwD0T"><strong data-page-node-id="IYhAHKplh4B5vXubBMMiyR">长文档问答与合同审阅</strong><br data-page-node-id="QE1QzJprDHt5pScVfenSYi">把整份合同/长报告直接放入窗口让模型通读。实践中要配合两条：关键条款优先放窗口首尾（对抗 Lost in the Middle）；超长文档先检索定位再精读局部，而不是无差别全塞。</li>
+    <li data-page-node-id="vuDLzcaKwWGmwwWQKJvZIC"><strong data-page-node-id="fn4OC1RuNXqNfwTpibxEII">多轮对话的历史管理</strong><br data-page-node-id="J3GWwoyftJkfJJZlAMcbze">聊天记录逐轮增长，逼近上限后必须治理：滑动窗口截断、对旧轮次做摘要压缩、把用户关键偏好写入结构化笔记——这正是各家"记忆"功能的底层逻辑。</li>
+    <li data-page-node-id="AzyuREdK7s2FDC8tsSLMj2"><strong data-page-node-id="TNJHDHfXC5MfaClomdNd9U">RAG 与长上下文的组合</strong><br data-page-node-id="e2bagaCEk44P8whSLhnVoF">两者不是替代关系：检索负责"挑重点+保时效"，长窗口负责"容得下"。Anthropic 在上下文工程博文中总结的 <strong data-page-node-id="eU76Rb2NJzNsnfoQPxNZti">just-in-time 检索</strong>是好范式：Claude Code 不预载全部代码，而是用文件路径与 grep <strong data-page-node-id="WdMcV7owvxhwbZeomc1z71">按需加载</strong>相关文件，窗口里只留当前需要的。</li>
+    <li data-page-node-id="n8o5gFrEiFI17pX3VGcpBj"><strong data-page-node-id="5r2PfmeaAgMfEvSKWhPf7A">Agent 的长时程记忆</strong><br data-page-node-id="zMStgZt6pesxydHwBIWfLA">跑几小时的智能体无法把全部历史塞进窗口：用压缩重开窗口、用文件/记忆工具持久化任务状态、用子代理分工探索——这三种手段已成为 Agent 框架的标准配置（同见 Anthropic 博文）。</li>
   </ol>
 </section>
 
-<section class="card" id="s4">
-  <h2>4. 易混淆点 &amp; 使用边界</h2>
-  <h3>四组最易混淆的对比</h3>
-  <table>
-    <tr><th>维度</th><th>上下文（窗口内容）</th><th>常被混淆成的东西</th></tr>
-    <tr><td>参数知识</td><td>临时摆上桌的资料，每次调用重新装</td><td>误当成"模型学会了"——训练进参数的知识才是永久的</td></tr>
-    <tr><td>跨会话记忆</td><td>单次调用结束即清空（无状态）</td><td>误以为模型"记得上次聊天"——记得住靠的是外部存储把历史重新装回窗口</td></tr>
-    <tr><td>有效长度</td><td>标称窗口只是"装得下"</td><td>误以为"装得下=用得上"——注意力稀释与 Lost in the Middle 让有效利用打折</td></tr>
-    <tr><td>长上下文 vs RAG</td><td>直接读全量资料</td><td>误以为互为替代——实践中是组合：检索挑重点，长窗口兜容量</td></tr>
-  </table>
-  <h3>使用边界与常见误用</h3>
-  <ul>
-    <li><strong>塞得进 ≠ 用得上</strong>：窗口从 128K 升到 1M，不代表把所有文档一股脑塞进去效果就更好——注意力预算有限、成本按 token 计费平方增长，仍应先检索再精读。</li>
-    <li><strong>长上下文不能替代 RAG</strong>：时效性知识（今天的新闻、最新库存）不在任何窗口里，必须外部检索；全量塞入还慢且贵。</li>
-    <li><strong>上下文 ≠ 跨会话记忆</strong>：模型的"记得你"全是工程手段（把历史/笔记重新装回窗口），底层每次调用都是白纸。</li>
-    <li><strong>token 消耗错觉</strong>：汉字、代码、表格的 token 开销与字符数差异很大；多轮对话的历史会持续吃掉预算，长回复同样占窗口——设计时应给输出留足空间。</li>
-    <li><strong>数字演进极快</strong>：各模型的窗口大小、多模态计量方式频繁更新，引用时以官方文档最新版为准。</li>
+<section class="card" id="s4" data-page-node-id="LhvGnNBNfIUzOEkpgg4zQK">
+  <h2 data-page-node-id="v60opex9loUZmaVBaT32VE">4. 易混淆点 &amp; 使用边界</h2>
+  <h3 data-page-node-id="OozEQqlpR2W0Necdr0oibo">四组最易混淆的对比</h3>
+  <table data-page-node-id="Q0JhebKCRRYSv99MVPfLWe">
+    <tbody><tr data-page-node-id="1z3PQNuyOxD3PHLLiUHxlL"><th data-page-node-id="w5DQB6nsZC9PYcQDBo1pXs">维度</th><th data-page-node-id="ELlkc9PlH99pc4goOjGLld">上下文（窗口内容）</th><th data-page-node-id="i06jwun0ynVNuI7QEzIWi4">常被混淆成的东西</th></tr>
+    <tr data-page-node-id="v0QHrGqprtZBWYOrDv5S7h"><td data-page-node-id="2Dtfu3GJX1R5Rw2qiY9zXV">参数知识</td><td data-page-node-id="E06BjzcpywQVnXC51wex8o">临时摆上桌的资料，每次调用重新装</td><td data-page-node-id="L02ocRC0uNNsJR5Mu4redr">误当成"模型学会了"——训练进参数的知识才是永久的</td></tr>
+    <tr data-page-node-id="Yah5WZhsS7qZEE6SUXRlyu"><td data-page-node-id="NNZAgLodeuYbAFImodHqJ1">跨会话记忆</td><td data-page-node-id="nv9csP3kuN1CrZDf30F0JQ">单次调用结束即清空（无状态）</td><td data-page-node-id="RYrHSMvvDhZLuna2eD2Hnd">误以为模型"记得上次聊天"——记得住靠的是外部存储把历史重新装回窗口</td></tr>
+    <tr data-page-node-id="jb5BDRaRPcErXRbkiFDMQ0"><td data-page-node-id="QpjomX55WhVtMnVtnh1pSO">有效长度</td><td data-page-node-id="eG8dUnvNVAZvNqdXXnrzgn">标称窗口只是"装得下"</td><td data-page-node-id="gc1ea8oAnTG4jcbNPV3pYh">误以为"装得下=用得上"——注意力稀释与 Lost in the Middle 让有效利用打折</td></tr>
+    <tr data-page-node-id="AEzUSQJXIJE8cJuuSkBzhD"><td data-page-node-id="VVyUcDJbCPZ08iv16QyrhD">长上下文 vs RAG</td><td data-page-node-id="FXS5ApJIkOcEHgRPeincCD">直接读全量资料</td><td data-page-node-id="Q3MfAGw9HLHnVpqlJVdue8">误以为互为替代——实践中是组合：检索挑重点，长窗口兜容量</td></tr>
+  </tbody></table>
+  <h3 data-page-node-id="13aYWmvQqbY0oxSrxCYhpF">使用边界与常见误用</h3>
+  <ul data-page-node-id="lCeFiHt7mqhcmkEDfdPMjb">
+    <li data-page-node-id="cODz8crAOArliNIpvhrH2r"><strong data-page-node-id="jB0JH7ohV4MqR42vTzrAxR">塞得进 ≠ 用得上</strong>：窗口从 128K 升到 1M，不代表把所有文档一股脑塞进去效果就更好——注意力预算有限、成本按 token 计费平方增长，仍应先检索再精读。</li>
+    <li data-page-node-id="UjXg5YR2XBtLjV4ha16wKo"><strong data-page-node-id="URBqvtZJ4GL1WvOIKhz7te">长上下文不能替代 RAG</strong>：时效性知识（今天的新闻、最新库存）不在任何窗口里，必须外部检索；全量塞入还慢且贵。</li>
+    <li data-page-node-id="jOu6e2Vhgj77hIxSUCBQ7K"><strong data-page-node-id="xlUF29GdUBCkhpQgjudAGI">上下文 ≠ 跨会话记忆</strong>：模型的"记得你"全是工程手段（把历史/笔记重新装回窗口），底层每次调用都是白纸。</li>
+    <li data-page-node-id="3UOwCJkuus6N0A6XEDVxA2"><strong data-page-node-id="7NUNszCPMAByU03MMmAs9b">token 消耗错觉</strong>：汉字、代码、表格的 token 开销与字符数差异很大；多轮对话的历史会持续吃掉预算，长回复同样占窗口——设计时应给输出留足空间。</li>
+    <li data-page-node-id="kkA0ycguPMJ2oelQQcxJHD"><strong data-page-node-id="7Qd8rW7KMbIp6ZQCX3rvxy">数字演进极快</strong>：各模型的窗口大小、多模态计量方式频繁更新，引用时以官方文档最新版为准。</li>
   </ul>
 </section>
 
-<section class="card" id="s5">
-  <h2>5. 可查证的正规参考来源链接</h2>
-  <p>以下 3 条均经过查证（2026-09-05 逐条访问确认），是本资料核心论断的依据：</p>
-  <ul class="ref">
-    <li><span class="kind">TACL 论文</span><a href="https://arxiv.org/abs/2307.03172" target="_blank" rel="noopener">Lost in the Middle: How Language Models Use Long Contexts — Liu et al., 2023</a><br>—— U 形注意力曲线与"中部信息丢失"现象的原始论文，本资料第 2、4 节关键论断来源。</li>
-    <li><span class="kind">官方工程博客</span><a href="https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents" target="_blank" rel="noopener">Effective context engineering for AI agents — Anthropic, 2025</a><br>—— "注意力预算 / context rot" 概念、just-in-time 检索与压缩/结构化笔记/子代理三大手段的出处。</li>
-    <li><span class="kind">arXiv 论文</span><a href="https://arxiv.org/abs/1706.03762" target="_blank" rel="noopener">Attention Is All You Need — Vaswani et al., 2017</a><br>—— Transformer 与自注意力机制的奠基论文，"平方复杂度"的机制根源。</li>
+<section class="card" id="s5" data-page-node-id="8GNDLwV4puUVONXX2E00IR">
+  <h2 data-page-node-id="G5Ar9wbCJT14nZK5qDeySc">5. 可查证的正规参考来源链接</h2>
+  <p data-page-node-id="dFm3I5HrhrikSUFLZLWfZt">以下 3 条均经过查证（2026-09-05 逐条访问确认），是本资料核心论断的依据：</p>
+  <ul class="ref" data-page-node-id="EpV0v3fJxu9EDo5s7J1DhP">
+    <li data-page-node-id="QvyEGcHE6RgLS4YWadl9Bw"><span class="kind" data-page-node-id="UkjZcz5hHfKIBIzFiUlR1i">TACL 论文</span><a href="https://arxiv.org/abs/2307.03172" target="_blank" rel="noopener" data-page-node-id="rgOZHGqSqwa9MCfqrWwQnL">Lost in the Middle: How Language Models Use Long Contexts — Liu et al., 2023</a><br data-page-node-id="bmyxhKspImDD0fSoGME9WY">—— U 形注意力曲线与"中部信息丢失"现象的原始论文，本资料第 2、4 节关键论断来源。</li>
+    <li data-page-node-id="ZKVIKHCAnnr9FEAHdWf6Vb"><span class="kind" data-page-node-id="YjUteD1he86Sn4dkAZZKD2">官方工程博客</span><a href="https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents" target="_blank" rel="noopener" data-page-node-id="FnKUN0LE6NVe1o9i1c5WLk">Effective context engineering for AI agents — Anthropic, 2025</a><br data-page-node-id="EPVgSYaHcXcEHrWNUULqXn">—— "注意力预算 / context rot" 概念、just-in-time 检索与压缩/结构化笔记/子代理三大手段的出处。</li>
+    <li data-page-node-id="YZw2upueLNpysbwj29vEhf"><span class="kind" data-page-node-id="idhE2RfslpQUglWXQvbQnr">arXiv 论文</span><a href="https://arxiv.org/abs/1706.03762" target="_blank" rel="noopener" data-page-node-id="FnbAKnU2zx80CGcyMDxAQA">Attention Is All You Need — Vaswani et al., 2017</a><br data-page-node-id="B2oEXcUOdlEg4CohENacp7">—— Transformer 与自注意力机制的奠基论文，"平方复杂度"的机制根源。</li>
   </ul>
-  <p class="pill">注：各模型的窗口大小与 token 计量规则演进极快，引用具体数字时请以官方文档最新版为准。</p>
+  <p class="pill" data-page-node-id="LkMYoUD5kVX1fVPMiO3PuQ">注：各模型的窗口大小与 token 计量规则演进极快，引用具体数字时请以官方文档最新版为准。</p>
 </section>
 
-<section class="card" id="s6">
-  <h2>6. 核心思考题</h2>
-  <ol>
-    <li>在工作台类比里，"把资料全摆上桌"（长上下文）和"去书架按需取"（RAG/工具检索）各付出了什么代价？<strong>出现了什么信号时，你应该从前者切换到后者</strong>？（提示：成本曲线、注意力稀释、资料时效性）</li>
-    <li>多轮对话产品为什么<strong>不能靠"无限加长窗口"一劳永逸解决记忆问题</strong>？请至少从计算成本、注意力稀释、工程可控性三个角度各说一条。</li>
-    <li>"全量塞窗口""检索相关片段""子代理读全文只回摘要"三种模式，在<strong>准确性、成本、隐私暴露面</strong>上各有优劣——若你设计一个分析公司内部敏感合同的系统，会怎么组合它们，为什么？</li>
+<section class="card" id="s6" data-page-node-id="zpeWiDn0kXHuYjhxnscCHY">
+  <h2 data-page-node-id="vCFiPSqSq6aA0YQuRu1Pwq">6. 核心思考题</h2>
+  <ol data-page-node-id="m4EKn64d9tdCiuKuV6cCb9">
+    <li data-page-node-id="yjiuwVXBWboMuBUOmvdrKY">在工作台类比里，"把资料全摆上桌"（长上下文）和"去书架按需取"（RAG/工具检索）各付出了什么代价？<strong data-page-node-id="ay9fKpcliiMETNAmCKrf6P">出现了什么信号时，你应该从前者切换到后者</strong>？（提示：成本曲线、注意力稀释、资料时效性）</li>
+    <li data-page-node-id="6KnT12BCprQIZA5ugQfUZm">多轮对话产品为什么<strong data-page-node-id="SXH3EpD6Z22f7el9XuoinN">不能靠"无限加长窗口"一劳永逸解决记忆问题</strong>？请至少从计算成本、注意力稀释、工程可控性三个角度各说一条。</li>
+    <li data-page-node-id="vfaYOhLWmOVvsW6OpburdS">"全量塞窗口""检索相关片段""子代理读全文只回摘要"三种模式，在<strong data-page-node-id="nXdDeVDCvEYVZAYqvGs40l">准确性、成本、隐私暴露面</strong>上各有优劣——若你设计一个分析公司内部敏感合同的系统，会怎么组合它们，为什么？</li>
   </ol>
 </section>
 
-<section class="card" id="s7">
-  <h2>7. 自测小题（附答案）</h2>
-  <p>先自己作答，再点开对照。覆盖本资料全部易错点。</p>
+<section class="card" id="s7" data-page-node-id="5DyaZnxW2PBUbQ9Jwt2qDO">
+  <h2 data-page-node-id="ZDNBH1dHkw2G3KBf3HhcIe">7. 自测小题（附答案）</h2>
+  <p data-page-node-id="fFLQLR9BFCCkyhwngcysQI">先自己作答，再点开对照。覆盖本资料全部易错点。</p>
 
-  <details><summary>第 1 题：上下文窗口以什么为单位计量？1 个汉字大约对应多少？心算 token 数可靠吗？</summary>
-    <div class="ans"><strong>答案：</strong>单位是 token（分词后的最小单元）。1 个汉字约 1~2 个 token，英文单词约 1.3 个——只是粗略估计。<strong>解析：</strong>不同 tokenizer 差异很大（代码、表格、表情更特殊），准确计数必须用官方计数工具，不要按字符数心算。</div>
+  <details data-page-node-id="oTQxAu7LGuvSJsCNMTI9GN"><summary data-page-node-id="AvoEBn0ejVoFjq7QJE5t52">第 1 题：上下文窗口以什么为单位计量？1 个汉字大约对应多少？心算 token 数可靠吗？</summary>
+    <div class="ans" data-page-node-id="KwpcAO8zK7UUZtG2j5F6QH"><strong data-page-node-id="9FBfWZnZEAJ43uwYrV05gX">答案：</strong>单位是 token（分词后的最小单元）。1 个汉字约 1~2 个 token，英文单词约 1.3 个——只是粗略估计。<strong data-page-node-id="42HRYb2824GXNW9Xg9PhrY">解析：</strong>不同 tokenizer 差异很大（代码、表格、表情更特殊），准确计数必须用官方计数工具，不要按字符数心算。</div>
   </details>
 
-  <details><summary>第 2 题：为什么注意力计算量会随上下文长度平方增长？这带来了哪两类直接代价？</summary>
-    <div class="ans"><strong>答案：</strong>Transformer 自注意力中<strong>每个 token 都要与所有 token 两两交互</strong>（Attention Is All You Need），序列长度翻倍 → 交互对数约翻四倍。<strong>解析：</strong>两类代价：① 计算与显存开销（更贵更慢）；② 注意力稀释——token 越多分给每份信息的注意力越少（Anthropic 称之为 context rot），效果不升反降。</div>
+  <details data-page-node-id="ouwflNFE3RRhuwU6GJpV3p"><summary data-page-node-id="1EulFXkjMj5PbCJcHVIza2">第 2 题：为什么注意力计算量会随上下文长度平方增长？这带来了哪两类直接代价？</summary>
+    <div class="ans" data-page-node-id="xaZFPYVquGYnV2jnPIzBZi"><strong data-page-node-id="xdU0GS3ID8bXBiNED54Rgq">答案：</strong>Transformer 自注意力中<strong data-page-node-id="WN7Em9RN0Kb6Z8BJGthPzt">每个 token 都要与所有 token 两两交互</strong>（Attention Is All You Need），序列长度翻倍 → 交互对数约翻四倍。<strong data-page-node-id="B54llnahvDT1cltXaUhCoV">解析：</strong>两类代价：① 计算与显存开销（更贵更慢）；② 注意力稀释——token 越多分给每份信息的注意力越少（Anthropic 称之为 context rot），效果不升反降。</div>
   </details>
 
-  <details><summary>第 3 题：Lost in the Middle 揭示了什么现象？对 RAG 系统的检索结果排布有什么工程启示？</summary>
-    <div class="ans"><strong>答案：</strong>模型对长上下文<strong>开头和结尾</strong>的信息利用最好，<strong>中部</strong>的关键信息极易被忽略（U 形曲线）。<strong>解析：</strong>启示是把最关键的内容放在窗口开头或结尾；RAG 命中片段排序时避免把高相关片段埋进中部，必要时做重排（rerank）后首尾布置。</div>
+  <details data-page-node-id="Fhfvxyi1WGK1jRBL8C1Rkt"><summary data-page-node-id="A9MNyGsg3oStf3Q4AyyFjA">第 3 题：Lost in the Middle 揭示了什么现象？对 RAG 系统的检索结果排布有什么工程启示？</summary>
+    <div class="ans" data-page-node-id="FUCdD4qUhdaWEA9QkxY5Vp"><strong data-page-node-id="8GCKoKVPBJpbOzfqgx4Qoh">答案：</strong>模型对长上下文<strong data-page-node-id="k4SVATUp3AR3gRehNoZcF3">开头和结尾</strong>的信息利用最好，<strong data-page-node-id="kgWa1tW0QPT3ly869SebX0">中部</strong>的关键信息极易被忽略（U 形曲线）。<strong data-page-node-id="OtJ23k4MBnbDBCiyyeZ92k">解析：</strong>启示是把最关键的内容放在窗口开头或结尾；RAG 命中片段排序时避免把高相关片段埋进中部，必要时做重排（rerank）后首尾布置。</div>
   </details>
 
-  <details><summary>第 4 题：一次调用中，上下文窗口里通常包含哪几类内容？输入和输出共用窗口吗？</summary>
-    <div class="ans"><strong>答案：</strong>通常包含 system prompt、对话历史、检索到的资料、工具定义与工具返回结果、本轮用户输入；<strong>输出预算与输入共享同一个窗口</strong>。<strong>解析：</strong>所以"128K 窗口"不等于能读 128K 再写 128K——历史越长，留给回复和工具结果的空间越小，这正是长对话需要压缩治理的原因。</div>
+  <details data-page-node-id="S1d2jeli3v2uAXuKkYvEJL"><summary data-page-node-id="ZCb5JvN1a6GyTRAO74IGxb">第 4 题：一次调用中，上下文窗口里通常包含哪几类内容？输入和输出共用窗口吗？</summary>
+    <div class="ans" data-page-node-id="oOPwudGJKVUAf4r30rWuH8"><strong data-page-node-id="drLvRui51GKReEbq4cEhjM">答案：</strong>通常包含 system prompt、对话历史、检索到的资料、工具定义与工具返回结果、本轮用户输入；<strong data-page-node-id="Hhy2Pl2UfRRV7dszmsAtm1">输出预算与输入共享同一个窗口</strong>。<strong data-page-node-id="7PHsg7BkHIK3vuedM4juqY">解析：</strong>所以"128K 窗口"不等于能读 128K 再写 128K——历史越长，留给回复和工具结果的空间越小，这正是长对话需要压缩治理的原因。</div>
   </details>
 
-  <details><summary>第 5 题（判断）：既然已有模型支持百万级 token 窗口，RAG 检索很快会被淘汰。这句话对吗？</summary>
-    <div class="ans"><strong>答案：</strong>错。<strong>解析：</strong>三个理由：① 塞得进≠用得上——注意力稀释与 Lost in the Middle 让全量塞入的效果打折；② 平方成本让"全量塞"又贵又慢；③ 时效性知识（最新新闻、实时库存）不在任何静态窗口里，必须外部检索。实践是<strong>组合</strong>：检索挑重点 + 长窗口兜容量 + just-in-time 按需加载。</div>
+  <details data-page-node-id="y1b96RcMHa7MwgULMxYLqu"><summary data-page-node-id="YCN7JDHa4fHvtVTInUTFOL">第 5 题（判断）：既然已有模型支持百万级 token 窗口，RAG 检索很快会被淘汰。这句话对吗？</summary>
+    <div class="ans" data-page-node-id="Co4DeijMzMGNBnE3DOLdC3"><strong data-page-node-id="qj0PGOWuEBTbFS3q5pDFOE">答案：</strong>错。<strong data-page-node-id="zRX4x5ciadBuAhXnCAoTrs">解析：</strong>三个理由：① 塞得进≠用得上——注意力稀释与 Lost in the Middle 让全量塞入的效果打折；② 平方成本让"全量塞"又贵又慢；③ 时效性知识（最新新闻、实时库存）不在任何静态窗口里，必须外部检索。实践是<strong data-page-node-id="lbcZZ4HUk9aoZ8pLC0cs5i">组合</strong>：检索挑重点 + 长窗口兜容量 + just-in-time 按需加载。</div>
   </details>
 </section>
 
-<div class="footer">由 concept-learning-generator 项目技能生成 · 2026-09-05 · 仓库：skill-learning-demo · 结构与红线详见 .workbuddy/skills/concept-learning-generator/SKILL.md</div>
+<div class="footer" data-page-node-id="B7TMxW1bVJCAZtnrqviVkL">由 concept-learning-generator 项目技能生成 · 2026-09-05 · 仓库：skill-learning-demo · 结构与红线详见 .workbuddy/skills/concept-learning-generator/SKILL.md</div>
 </div>
-</body>
-</html>
+
+
+
+</body></html>

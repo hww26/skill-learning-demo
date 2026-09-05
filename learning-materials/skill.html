@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skill（Agent Skills）学习资料</title>
+<style>
+  :root{--ink:#1f2328;--muted:#656d76;--line:#d8dee4;--accent:#b5482e;--accent-soft:#fcefe9;--teal:#0f6e56;--teal-soft:#e1f5ee;--amber:#854f0b;--amber-soft:#faeeda;--card:#ffffff;--bg:#f6f8fa}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Segoe UI","Microsoft YaHei",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.75;font-size:15.5px}
+  .wrap{max-width:880px;margin:0 auto;padding:32px 20px 64px}
+  header.hero{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px 32px;margin-bottom:20px}
+  header.hero h1{font-size:26px;font-weight:600;letter-spacing:.5px}
+  header.hero .sub{color:var(--muted);margin-top:6px;font-size:14px}
+  .badge{display:inline-block;background:var(--accent-soft);color:var(--accent);border-radius:6px;padding:2px 10px;font-size:12.5px;margin:12px 6px 0 0}
+  .caliber{background:var(--amber-soft);border-left:4px solid #d9a24a;border-radius:8px;padding:10px 14px;margin-top:16px;font-size:14px;color:var(--amber)}
+  nav.toc{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 24px;margin-bottom:20px}
+  nav.toc h2{font-size:15px;margin-bottom:8px;color:var(--accent)}
+  nav.toc ol{padding-left:22px;columns:2;column-gap:32px}
+  nav.toc li{font-size:14px;margin:3px 0}
+  nav.toc a{color:var(--ink);text-decoration:none;border-bottom:1px dotted var(--line)}
+  nav.toc a:hover{color:var(--accent)}
+  section.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px 30px;margin-bottom:20px;scroll-margin-top:16px}
+  section.card h2{font-size:19px;font-weight:600;padding-left:12px;border-left:4px solid var(--accent);margin-bottom:14px}
+  section.card h3{font-size:15.5px;margin:18px 0 8px;color:var(--accent)}
+  section.card p{margin:8px 0}
+  section.card ul,section.card ol{padding-left:24px;margin:8px 0}
+  section.card li{margin:5px 0}
+  .quote{background:var(--accent-soft);border-radius:10px;padding:12px 16px;margin:10px 0;font-size:14.5px}
+  .analogy{background:var(--teal-soft);border-left:4px solid var(--teal);border-radius:8px;padding:12px 16px;margin:12px 0;font-size:14.5px}
+  table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+  th,td{border:1px solid var(--line);padding:8px 12px;text-align:left;vertical-align:top}
+  th{background:#eef2f6;font-weight:600}
+  tr:nth-child(even) td{background:#fbfcfd}
+  pre{background:#0d1117;color:#e6edf3;border-radius:10px;padding:16px 18px;overflow-x:auto;font-family:Consolas,"Courier New",monospace;font-size:13.5px;line-height:1.6;margin:12px 0}
+  .ref{list-style:none;padding-left:0}
+  .ref li{padding:10px 14px;border:1px solid var(--line);border-radius:10px;margin:8px 0;background:#fbfcfd;font-size:14px}
+  .ref a{color:var(--accent);font-weight:600;word-break:break-all}
+  .ref .kind{display:inline-block;font-size:11.5px;background:var(--teal-soft);color:var(--teal);border-radius:4px;padding:1px 8px;margin-right:8px;white-space:nowrap}
+  details{background:#fbfcfd;border:1px solid var(--line);border-radius:10px;padding:10px 16px;margin:10px 0}
+  summary{cursor:pointer;font-weight:600;font-size:14.5px}
+  details[open]{background:var(--accent-soft)}
+  .ans{margin-top:8px;font-size:14px}
+  .footer{color:var(--muted);font-size:12.5px;text-align:center;margin-top:8px}
+  .pill{display:inline-block;font-size:12px;color:var(--muted);background:#eef1f4;border-radius:10px;padding:1px 10px;margin-right:6px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <h1>Skill（Agent Skills）学习资料</h1>
+  <div class="sub">《大数据与人工智能》课程 · 概念学习资料 · 由 concept-learning-generator 技能生成</div>
+  <span class="badge">Agent Skills</span><span class="badge">SKILL.md</span><span class="badge">渐进式披露</span><span class="badge">开放标准</span>
+  <div class="caliber"><strong>定义口径说明：</strong>本资料的"Skill"指 AI Agent 领域的 <strong>Agent Skill（智能体技能）</strong>——以 SKILL.md 为入口的模块化能力包。该格式由 Anthropic 于 2025 年提出，现已发展为开放标准（agentskills.io）。它 <strong>≠ 日常语义的"技能/技巧"</strong>（如"沟通技能"），也不是某个具体产品的名字。一个现实锚点：本仓库 .workbuddy/skills/ 下的 concept-learning-generator 就是一个 Agent Skill——你眼前这份资料正是它生成的。</div>
+</header>
+
+<nav class="toc">
+  <h2>目录</h2>
+  <ol>
+    <li><a href="#goals">学习目标</a></li>
+    <li><a href="#s1">1. 个人理解解释</a></li>
+    <li><a href="#s2">2. 核心机制 / 组成</a></li>
+    <li><a href="#s3">3. 真实落地应用场景</a></li>
+    <li><a href="#s4">4. 易混淆点 &amp; 使用边界</a></li>
+    <li><a href="#s5">5. 可查证的正规参考来源链接</a></li>
+    <li><a href="#s6">6. 核心思考题</a></li>
+    <li><a href="#s7">7. 自测小题（附答案）</a></li>
+  </ol>
+</nav>
+
+<section class="card" id="goals">
+  <h2>学习目标</h2>
+  <ul>
+    <li>学完能够<strong>说清 Agent Skill 是什么</strong>：一个以 SKILL.md 为入口的能力包目录，能描述它的标准结构与 frontmatter 字段。</li>
+    <li>学完能够<strong>解释三级渐进式披露</strong>（Discovery → Activation → Execution）如何为上下文窗口省预算——并与上一篇《大模型的上下文》中"注意力预算"概念打通。</li>
+    <li>学完能够<strong>区分 Skill 与 Tool / MCP / System Prompt / RAG</strong>，不再把它们混为一谈。</li>
+    <li>学完能够<strong>识别 Skill 的安全边界</strong>：为什么第三方技能必须先审查再安装。</li>
+  </ul>
+</section>
+
+<section class="card" id="s1">
+  <h2>1. 个人理解解释</h2>
+  <p>我的理解：Agent Skill 是给 AI 智能体装上的<strong>"可插拔专业能力包"</strong>——本质是一个文件夹：核心是一份 SKILL.md（用 YAML frontmatter 声明名字与用途，正文写清分步操作指南），可选地附带脚本、参考文档和素材。Agent 平时只知道每个技能"叫什么、干什么用"（一行简介）；判断当前任务用得上时，才把完整的操作说明展开进上下文，照着指南干活。</p>
+  <div class="analogy"><b>类比：Skill 就是给新员工的岗位手册。没有人指望新员工入职第一天背下全公司所有流程——正确做法是把操作手册放进档案柜，每个文件夹标签写得清清楚楚；接到什么任务，就去翻对应那本手册。SKILL.md 的 frontmatter 就是档案柜上的标签，正文就是手册内容；scripts/ 是可直接运行的计算器，references/ 是附录详表，assets/ 是配套素材。这也是 Anthropic 官方的定位："像为一位能力很强但完全不了解你公司的新员工，写下他需要的入职指南。"</b></div>
+  <h3>在 AI 技术版图中的位置</h3>
+  <p>Skill 填补的是<strong>"模型通用能力"与"具体业务操作"之间的缺口</strong>：模型天生会推理会写作，但不知道你公司的报销流程、你的文档模板、你的代码规范。Tool / MCP 给模型"手脚"（能调外部 API），Skill 给模型"岗位说明书"（知道按什么流程、什么标准做）。同时，Skill 是<strong>上下文工程的一种标准化实现</strong>（呼应本系列上一篇《大模型的上下文》）：几十个技能若全文常驻窗口，能把注意力预算瞬间吃光；渐进式披露让"知识库存档、用哪本翻哪本"成为可能。</p>
+</section>
+
+<section class="card" id="s2">
+  <h2>2. 核心机制 / 组成</h2>
+  <h3>标准目录结构（agentskills.io 开放规范）</h3>
+  <pre>my-skill/
+├── SKILL.md        【必须】YAML frontmatter(name+description) + 操作指南正文
+├── scripts/        可选：可执行脚本（格式转换、批量处理等，由运行环境直接执行）
+├── references/     可选：参考文档（详细规范、API 说明，按需加载进上下文）
+└── assets/         可选：素材文件（模板、字体、图片等，不进上下文直接使用）</pre>
+  <p>frontmatter <strong>最少只需 name 和 description 两个字段</strong>——官方仓库 anthropics/skills 中的技能即如此。name 供目录索引，description 是模型判断"这个任务该不该用我"的唯一依据，所以必须把<strong>适用场景写具体</strong>（写"处理文档"没用，写"当用户需要创建或编辑 Word/Excel/PPT/PDF 文件时使用"才有效）。</p>
+  <h3>核心机制：三级渐进式披露（Progressive Disclosure）</h3>
+  <table>
+    <tr><th>阶段</th><th>发生什么</th><th>占用上下文的量</th></tr>
+    <tr><td><strong>① Discovery（发现）</strong></td><td>会话启动时，Agent 只读每个技能的 name + description</td><td>极小：每个技能约几十 token（一行简介）</td></tr>
+    <tr><td><strong>② Activation（激活）</strong></td><td>模型判断当前任务匹配某技能，才把该技能 SKILL.md <strong>正文</strong>读入上下文</td><td>中：只有被选中的那一个技能全文</td></tr>
+    <tr><td><strong>③ Execution（执行）</strong></td><td>照指南操作；scripts/ 里的脚本由运行环境<strong>直接执行</strong></td><td>最小化：脚本代码本身<strong>不进上下文</strong>，只有调用语句和返回结果占窗口</td></tr>
+  </table>
+  <div class="quote">这套设计直接回应上下文预算问题：把"全部操作知识常驻"改为"索引常驻、正文按需、脚本离线跑"。几十个技能在 Discovery 阶段的总开销，可能还不如一整篇长文档——这正是它与"把所有 SOP 写进 System Prompt"的本质差别。</div>
+  <h3>一个真实的 SKILL.md 长什么样</h3>
+  <p>本仓库自带的技能（生成你眼前这份资料的技能）就是活例子：</p>
+  <pre>---
+name: concept-learning-generator
+description: 输入一个AI相关概念，自动生成结构化概念学习资料
+---
+# 操作指南（正文节选）
+1. 解析输入的概念名，先做口径界定……
+2. 调研并逐条查证参考来源，无法验证的剔除……
+3. 按固定八节结构生成 HTML，存入 learning-materials/……
+4. 提交并推送到 GitHub 仓库……</pre>
+</section>
+
+<section class="card" id="s3">
+  <h2>3. 真实落地应用场景</h2>
+  <ol>
+    <li><strong>办公文档处理（最出圈的落地）</strong><br>Anthropic 官方技能库 anthropics/skills 提供了 docx / pdf / pptx / xlsx 四类文档技能（source-available 许可）：教模型按真实的 Office 文件规范创建、编辑文档——Word 的修订、Excel 的公式、PPT 的母版都能正确处理，而不是输出一段"看起来像文档"的文本。</li>
+    <li><strong>企业内部 SOP 固化</strong><br>把公司的报销流程、代码评审规范、品牌设计要求写成技能，团队里任何人、任何会话都能即取即用——相当于把"口口相传的经验"变成版本可控的资产。</li>
+    <li><strong>创意设计与开发辅助</strong><br>anthropics/skills 官方仓库按四大类别组织技能：创意设计（如 canvas-design、artifact-builder）、开发技术、企业沟通、文档技能。比如"按我们产品的视觉规范做一张海报页"这类任务，靠提示词每次都要重讲一遍，靠技能则一次沉淀。</li>
+    <li><strong>跨客户端的开放生态</strong><br>Agent Skills 已作为开放标准发布于 agentskills.io，被 Cursor、Gemini CLI、GitHub Copilot、VS Code、OpenCode、Goose 等大量客户端采纳——一份符合规范的技能，理论上可以在支持该标准的所有工具里复用，不锁定单一厂商。</li>
+    <li><strong>本仓库的实战自证</strong><br>concept-learning-generator：输入任意 AI 概念 → 查证来源 → 按八节结构生成学习资料 HTML → 提交推送。系列前三篇（agent.html、llm-context.html、本篇 skill.html）全部由它产出——"技能"本身就是这份《Skill》学习资料的最佳案例。</li>
+  </ol>
+</section>
+
+<section class="card" id="s4">
+  <h2>4. 易混淆点 &amp; 使用边界</h2>
+  <h3>五件常被混为一谈的东西</h3>
+  <table>
+    <tr><th>维度</th><th>Agent Skill</th><th>Tool / Function Calling</th><th>MCP</th><th>System Prompt</th><th>RAG</th></tr>
+    <tr><td><strong>它是什么</strong></td><td>结构化能力包（指南+资源目录）</td><td>模型可调用的具体函数</td><td>接入外部工具/数据源的开放协议</td><td>全局指令与人设</td><td>外部知识的检索机制</td></tr>
+    <tr><td><strong>上下文占用</strong></td><td>渐进式：简介常驻、正文按需、脚本不进窗口</td><td>工具定义全程常驻</td><td>工具清单全程常驻</td><td>全程常驻</td><td>检索结果按需进入</td></tr>
+    <tr><td><strong>解决的问题</strong></td><td>"怎么按流程做专业任务"</td><td>给模型"手脚"</td><td>标准化地给"手脚"并接生态</td><td>设定行为基调</td><td>补时效性/私有知识</td></tr>
+    <tr><td><strong>相互关系</strong></td><td colspan="4">技能正文可以"指挥"模型去调用 Tool / MCP 工具——Skill 管流程编排，Tool/MCP 管实际执行；System Prompt 是全局的，Skill 是任务级按需的。</td><td>技能的 references/ 是确定性挂载的资料，不走向量检索</td></tr>
+  </table>
+  <h3>使用边界与常见误用</h3>
+  <ul>
+    <li><strong>Skill ≠ 插件/宏</strong>：它不是硬编码的自动化流程，而是<strong>写给模型的指南</strong>——模型仍有判断空间，同一技能在不同场景可以灵活变通执行。指望"装了技能就 100% 复现固定动作"是误解。</li>
+    <li><strong>Skill ≠ 微调</strong>：不更新任何模型参数，纯上下文层面的挂载——即装、即用、即改、即删；微调是"回炉重训"，技能是"发一本手册"。</li>
+    <li><strong>不是万能药</strong>：任务简单且固定时，一句提示词就够；为一个两步操作写整套技能目录属于过度工程。技能的价值随<strong>流程的长度和复用频率</strong>增长。</li>
+    <li><strong>指南质量决定效果</strong>：description 写得含糊，模型在 Discovery 阶段就选不中它；正文写得空洞，激活了也干不好。判断标准很朴素——像给新员工写 SOP 一样具体、可操作、有示例。</li>
+    <li><strong>安全红线（Anthropic 官方明确提示）</strong>：技能本质是"给模型的指令"，来源不可信的技能可能夹带恶意指令（提示注入），诱导模型泄露数据或执行危险操作；scripts/ 会被<strong>真实执行</strong>。因此安装第三方技能前必须审查其全部内容——这条红线与"不随便运行陌生人的脚本"完全同构。</li>
+  </ul>
+</section>
+
+<section class="card" id="s5">
+  <h2>5. 可查证的正规参考来源链接</h2>
+  <p>以下 3 条均经过查证（2026-09-05 逐条访问确认），是本资料核心论断的依据：</p>
+  <ul class="ref">
+    <li><span class="kind">官方工程博客</span><a href="https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills" target="_blank" rel="noopener">Equipping agents for the real world with Agent Skills — Anthropic Engineering, 2025-10-16</a><br>—— "像为新员工编写入职指南"的官方类比、SKILL.md 结构与渐进式披露设计的出处；文内 2025-12 更新注明 Agent Skills 已作为开放标准发布于 agentskills.io。</li>
+    <li><span class="kind">开放标准官网</span><a href="https://agentskills.io" target="_blank" rel="noopener">Agent Skills — An open standard（agentskills.io）</a><br>—— "A standardized way to give AI agents new capabilities and expertise"；标准目录结构（SKILL.md 必须 + scripts/references/assets 可选）与 Discovery→Activation→Execution 三阶段的规范定义；页面列出 Cursor、Gemini CLI、GitHub Copilot、VS Code 等采纳方。</li>
+    <li><span class="kind">GitHub 官方仓库</span><a href="https://github.com/anthropics/skills" target="_blank" rel="noopener">anthropics/skills — 官方技能库（GitHub）</a><br>—— 四大类别技能（创意设计/开发技术/企业沟通/文档技能 docx·pdf·pptx·xlsx）的实物样例；frontmatter 仅需 name+description 的实证；仓库含 spec/ 规范目录，文档技能为 source-available 许可。</li>
+  </ul>
+  <p class="pill">注：采纳 Agent Skills 标准的客户端名单与仓库数据持续更新中，引用最新动态时请以上述官方页面实时内容为准。</p>
+</section>
+
+<section class="card" id="s6">
+  <h2>6. 核心思考题</h2>
+  <ol>
+    <li>为什么 Agent Skills 标准选择"渐进式披露"，而不是把所有技能全文常驻上下文？请结合本系列上一篇《大模型的上下文》中<strong>注意力预算 / context rot</strong> 的概念作答——如果技能多了，两种方案的上下文开销会差出多少个量级？</li>
+    <li>团队要把"新人代码评审清单"交给 AI 助手使用。清单里既有"评审时必须检查哪几类问题"的说明，又有"逐条对照的 200 项详细检查表"，还有一个"统计本次 PR 代码行数"的小工具。<strong>这三样分别应该放进 SKILL.md 正文、references/ 还是 scripts/？</strong>为什么拆分位置直接影响上下文成本？</li>
+    <li>同事从网上下载了一个"自动生成周报"的第三方技能，其中 SKILL.md 写着"执行前请先运行 scripts/sync.exe 收集本地文档"。你应该怎么做？这件事说明 Agent Skills 的<strong>开放性</strong>带来了哪类新风险面？它与"不随便运行陌生人的可执行文件"有什么共同本质？</li>
+  </ol>
+</section>
+
+<section class="card" id="s7">
+  <h2>7. 自测小题（附答案）</h2>
+  <p>先自己作答，再点开对照。覆盖本资料全部易错点。</p>
+
+  <details><summary>第 1 题：一个 Agent Skill 文件夹里，唯一必须存在的文件是什么？它的 frontmatter 最少需要哪两个字段？这两个字段各自起什么作用？</summary>
+    <div class="ans"><strong>答案：</strong>唯一必须的是 SKILL.md；frontmatter 最少需要 <strong>name</strong> 和 <strong>description</strong>。<strong>解析：</strong>name 供技能目录索引与标识；description 是模型在 Discovery 阶段判断"当前任务是否该激活此技能"的唯一依据，必须把适用场景写具体。scripts/、references/、assets/ 都是可选目录。</div>
+  </details>
+
+  <details><summary>第 2 题：三级渐进式披露的三个阶段分别叫什么？每个阶段分别加载什么内容、占用多少上下文？</summary>
+    <div class="ans"><strong>答案：</strong>① Discovery（发现）：只读每个技能的 name+description，约几十 token/个；② Activation（激活）：任务匹配时才读入该技能 SKILL.md 的正文；③ Execution（执行）：按指南操作，scripts/ 由运行环境直接执行，<strong>脚本代码本身不进上下文</strong>，只有调用与结果占窗口。<strong>解析：</strong>设计目标是"索引常驻、正文按需、脚本离线跑"，用最小上下文换取专业能力。</div>
+  </details>
+
+  <details><summary>第 3 题（判断）：安装第三方技能前不用审查内容——反正 Agent 自己会判断技能合不合适、安不安全。</summary>
+    <div class="ans"><strong>答案：</strong>错。<strong>解析：</strong>技能本质是写给模型的指令，恶意技能可借提示注入诱导模型泄露数据、执行危险操作（Anthropic 官方安全提醒）；scripts/ 会被运行环境真实执行。模型会"遵循指令"恰恰意味着它可能被恶意指令利用——审查必须在安装前由人来完成。</div>
+  </details>
+
+  <details><summary>第 4 题：Agent Skill 与微调（fine-tuning）的本质区别是什么？各自适合什么场景？</summary>
+    <div class="ans"><strong>答案：</strong>Skill <strong>不更新任何模型参数</strong>，只在上下文层挂载指南与资源——即装即用、改删方便、跨支持标准的客户端通用；微调改写模型参数，成本高、周期长、改动不透明。<strong>解析：</strong>流程性/文档性知识用 Skill（发手册），需要改变模型底层行为模式（如稳定的风格、领域语言习惯）才考虑微调（回炉重训）。绝大多数"教会模型做事"的需求，Skill 的性价比远高于微调。</div>
+  </details>
+
+  <details><summary>第 5 题：本仓库的 concept-learning-generator 算不算一个 Agent Skill？对照开放标准的目录结构，它符合哪几点？缺什么、可不可以？</summary>
+    <div class="ans"><strong>答案：</strong>算。它位于 .workbuddy/skills/concept-learning-generator/，① 有 SKILL.md（必须项 ✔）；② frontmatter 含 name+description（✔）；③ 正文是分步可操作指南（✔）。它没有 scripts/、references/、assets/ 等可选目录——<strong>可选部分允许省略，完全符合规范</strong>。<strong>解析：</strong>判断"是不是 Agent Skill"看格式合规，不目录齐全；可选目录按需添加。</div>
+  </details>
+</section>
+
+<div class="footer">由 concept-learning-generator 项目技能生成 · 2026-09-05 · 仓库：skill-learning-demo · 结构与红线详见 .workbuddy/skills/concept-learning-generator/SKILL.md · 本系列第三篇（前篇：agent.html / llm-context.html）</div>
+</div>
+
+</body></html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agent（智能体）学习资料</title>
+<style>
+  :root{--ink:#1f2328;--muted:#656d76;--line:#d8dee4;--accent:#185fa5;--accent-soft:#e6f1fb;--teal:#0f6e56;--teal-soft:#e1f5ee;--amber:#854f0b;--amber-soft:#faeeda;--card:#ffffff;--bg:#f6f8fa}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Segoe UI","Microsoft YaHei",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.75;font-size:15.5px}
+  .wrap{max-width:880px;margin:0 auto;padding:32px 20px 64px}
+  header.hero{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px 32px;margin-bottom:20px}
+  header.hero h1{font-size:26px;font-weight:600;letter-spacing:.5px}
+  header.hero .sub{color:var(--muted);margin-top:6px;font-size:14px}
+  .badge{display:inline-block;background:var(--accent-soft);color:var(--accent);border-radius:6px;padding:2px 10px;font-size:12.5px;margin:12px 6px 0 0}
+  .caliber{background:var(--amber-soft);border-left:4px solid #d9a24a;border-radius:8px;padding:10px 14px;margin-top:16px;font-size:14px;color:var(--amber)}
+  nav.toc{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 24px;margin-bottom:20px}
+  nav.toc h2{font-size:15px;margin-bottom:8px;color:var(--accent)}
+  nav.toc ol{padding-left:22px;columns:2;column-gap:32px}
+  nav.toc li{font-size:14px;margin:3px 0}
+  nav.toc a{color:var(--ink);text-decoration:none;border-bottom:1px dotted var(--line)}
+  nav.toc a:hover{color:var(--accent)}
+  section.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px 30px;margin-bottom:20px;scroll-margin-top:16px}
+  section.card h2{font-size:19px;font-weight:600;padding-left:12px;border-left:4px solid var(--accent);margin-bottom:14px}
+  section.card h3{font-size:15.5px;margin:18px 0 8px;color:var(--accent)}
+  section.card p{margin:8px 0}
+  section.card ul,section.card ol{padding-left:24px;margin:8px 0}
+  section.card li{margin:5px 0}
+  .quote{background:var(--accent-soft);border-radius:10px;padding:12px 16px;margin:10px 0;font-size:14.5px}
+  .analogy{background:var(--teal-soft);border-left:4px solid var(--teal);border-radius:8px;padding:12px 16px;margin:12px 0;font-size:14.5px}
+  table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+  th,td{border:1px solid var(--line);padding:8px 12px;text-align:left;vertical-align:top}
+  th{background:#eef2f6;font-weight:600}
+  tr:nth-child(even) td{background:#fbfcfd}
+  pre{background:#0d1117;color:#e6edf3;border-radius:10px;padding:16px 18px;overflow-x:auto;font-family:Consolas,"Courier New",monospace;font-size:13.5px;line-height:1.6;margin:12px 0}
+  code.inline{background:#eef1f4;border-radius:4px;padding:1px 6px;font-family:Consolas,monospace;font-size:13.5px;color:#b13a5e}
+  .ref{list-style:none;padding-left:0}
+  .ref li{padding:10px 14px;border:1px solid var(--line);border-radius:10px;margin:8px 0;background:#fbfcfd;font-size:14px}
+  .ref a{color:var(--accent);font-weight:600;word-break:break-all}
+  .ref .kind{display:inline-block;font-size:11.5px;background:var(--teal-soft);color:var(--teal);border-radius:4px;padding:1px 8px;margin-right:8px;white-space:nowrap}
+  details{background:#fbfcfd;border:1px solid var(--line);border-radius:10px;padding:10px 16px;margin:10px 0}
+  summary{cursor:pointer;font-weight:600;font-size:14.5px}
+  details[open]{background:var(--accent-soft)}
+  .ans{margin-top:8px;font-size:14px}
+  .footer{color:var(--muted);font-size:12.5px;text-align:center;margin-top:8px}
+  .pill{display:inline-block;font-size:12px;color:var(--muted);background:#eef1f4;border-radius:10px;padding:1px 10px;margin-right:6px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <h1>Agent（智能体）学习资料</h1>
+  <div class="sub">《大数据与人工智能》课程 · 概念学习资料 · 由 concept-learning-generator 技能生成</div>
+  <span class="badge">大模型应用</span><span class="badge">LLM Agent</span><span class="badge">Agentic Systems</span>
+  <div class="caliber"><strong>定义口径说明：</strong>本资料采用 AI 领域当前通行含义——<strong>LLM Agent（大模型驱动的智能体）</strong>，即由大模型动态决定执行流程与工具使用、以完成给定任务的系统。它不同于强化学习教材中经典的 "感知—决策—行动" 通用 Agent 概念，也不同于 "AI Agent" 的泛化营销用法。</div>
+</header>
+
+<nav class="toc">
+  <h2>目录</h2>
+  <ol>
+    <li><a href="#goals">学习目标</a></li>
+    <li><a href="#s1">1. 个人理解解释</a></li>
+    <li><a href="#s2">2. 核心机制 / 组成</a></li>
+    <li><a href="#s3">3. 真实落地应用场景</a></li>
+    <li><a href="#s4">4. 易混淆点 &amp; 使用边界</a></li>
+    <li><a href="#s5">5. 可查证的正规参考来源链接</a></li>
+    <li><a href="#s6">6. 核心思考题</a></li>
+    <li><a href="#s7">7. 自测小题（附答案）</a></li>
+  </ol>
+</nav>
+
+<section class="card" id="goals">
+  <h2>学习目标</h2>
+  <ul>
+    <li>学完能够<strong>用一句话说清 Agent 与聊天机器人、固定工作流（Workflow）的本质区别</strong>：执行流程由谁决定。</li>
+    <li>学完能够<strong>说出 LLM Agent 的三大核心组件</strong>（规划、记忆、工具使用）并画出它的工作循环。</li>
+    <li>学完能够<strong>判断一个具体任务该用 Agent 还是 Workflow</strong>，并说明取舍理由（灵活性 vs 可预测性）。</li>
+    <li>学完能够<strong>列举生产级 Agent 必备的工程护栏</strong>（终止条件、权限最小化、人工确认、沙箱测试）。</li>
+  </ul>
+</section>
+
+<section class="card" id="s1">
+  <h2>1. 个人理解解释</h2>
+  <p><strong>一句话大白话定义：</strong>Agent 就是让大模型从"回答问题"升级为"完成事情"的系统——你只给它一个目标，它自己拆解步骤、调用工具、观察结果、纠正错误，循环推进直到交付。</p>
+  <div class="analogy"><strong>类比：</strong>普通 LLM 对话像<strong>问路</strong>——你问"报告怎么发邮件"，它给你一段说明，然后就没有然后了。Agent 像你<strong>雇了个助理</strong>——你说"把这份报告发给王老师"，他自己去找文件、转成 PDF、写邮件、发送，发现附件太大就自己压缩再发，卡住了就换个思路重来。核心差别只有一条：<strong>"下一步做什么"由他自己现场决定，而不是由你预先写死的脚本决定。</strong></div>
+  <h3>权威定义的锚点</h3>
+  <div class="quote">Anthropic 工程博客《Building effective agents》的区分：把这类系统统称为 <strong>agentic systems（智能系统）</strong>，但架构上分两类——<br>· <strong>Workflow（工作流）</strong>：LLM 和工具按<strong>预设代码路径</strong>编排执行；<br>· <strong>Agent（智能体）</strong>：LLM <strong>动态主导自己的执行流程与工具使用</strong>，自主掌控任务的完成方式。</div>
+  <p>业内还有一句更锋利的判据（LangChain CEO Harrison Chase）："<em>如果 LLM 能改变你应用的控制流，它就是 Agent；如果控制流被你的代码写死，它就不是。</em>"</p>
+  <h3>在 AI 技术版图中的位置</h3>
+  <p>按系统复杂度递增：单次 Prompt 问答 → 检索增强（RAG）→ Workflow（提示链、路由、并行）→ <strong>Agent（自主循环）</strong> → 多 Agent 协作。Anthropic 反复强调：<strong>能用简单方案就不要上 Agent</strong>——Agent 用更高的延迟、成本和不可预测性，换取处理开放式任务的能力。</p>
+</section>
+
+<section class="card" id="s2">
+  <h2>2. 核心机制 / 组成</h2>
+  <p>Lilian Weng（前 OpenAI 安全研究副总裁）2023 年的经典综述给出了沿用至今的三组件框架，LLM 在其中充当"大脑"：</p>
+  <table>
+    <tr><th>组件</th><th>作用</th><th>典型实现</th></tr>
+    <tr><td><strong>规划 Planning</strong></td><td>把大目标拆成子目标（任务分解）；对过去的行动自我批评与修正（自我反思）</td><td>思维链 CoT、思维树 ToT、ReAct、Reflexion</td></tr>
+    <tr><td><strong>记忆 Memory</strong></td><td>短期记忆＝上下文窗口内的对话与中间结果；长期记忆＝跨会话的信息留存与召回</td><td>上下文学习（短期）；向量数据库 + 相似检索（长期）</td></tr>
+    <tr><td><strong>工具使用 Tool Use</strong></td><td>连接模型权重之外的世界：实时信息、计算、代码执行、私有数据、外部系统</td><td>函数调用（function calling）、搜索 API、代码解释器、MCP 协议</td></tr>
+  </table>
+  <h3>运行循环：ReAct 模式</h3>
+  <p>现代 Agent 的心脏是 <strong>ReAct</strong>（Reasoning + Acting，Yao et al. 2023）循环——"想一步、做一步、看结果、再想"：</p>
+  <pre>while 任务未完成 且 未触发终止条件:
+    Thought     = LLM(目标, 历史轨迹, 上一次Observation)  # 思考：下一步该干嘛
+    Action      = 选择并调用工具                          # 行动：查资料 / 跑代码 / 调API
+    Observation = 环境返回的真实结果                      # 观察：拿到 ground truth
+    将 (Thought, Action, Observation) 写入历史, 更新记忆
+交付最终结果</pre>
+  <p>每一步都从环境获取<strong>真实反馈</strong>（工具返回值、代码执行输出）来评估进度——这是 Agent 区别于"一口气生成长计划再执行"的关键：计划可以随时根据现实修正。</p>
+  <h3>Anthropic 的三条生产原则</h3>
+  <ol>
+    <li><strong>保持简单</strong>：Agent 本质上"只是 LLM 在循环里根据环境反馈使用工具"，不必堆框架；</li>
+    <li><strong>保持透明</strong>：显式展示 Agent 的每一步规划，方便调试与信任；</li>
+    <li><strong>精心设计 ACI</strong>（Agent-Computer Interface，智能体-计算机接口）：工具文档与参数设计的投入甚至要超过主提示词——Anthropic 在搭建 SWE-bench 编码智能体时，花在工具优化上的时间超过了提示词本身。</li>
+  </ol>
+</section>
+
+<section class="card" id="s3">
+  <h2>3. 真实落地应用场景</h2>
+  <ol>
+    <li><strong>编程智能体（当前最成熟的落地场景）</strong><br>Anthropic 官方报告：其编码 Agent 仅凭 Pull Request 描述，就能解决 SWE-bench Verified 基准中真实的 GitHub 程序问题。共同产品形态如 Claude Code、GitHub Copilot Workspace 等：自主定位文件 → 修改代码 → 运行测试 → 根据报错迭代。适合 Agent 的原因：代码方案可通过自动化测试<strong>客观验证</strong>，反馈闭环完整。</li>
+    <li><strong>客服智能体</strong><br>在聊天界面上接入工具：调取客户资料、订单记录、知识库文章；程序化执行退款、更新工单等操作。Anthropic 提到已有多家企业采用"按成功解决计费"的商业模式——敢于这么收费，本身就是对 Agent 效果的信心背书。</li>
+    <li><strong>计算机 / 浏览器操作</strong><br>Claude 的 "computer use" 参考实现：让模型直接操控计算机（看屏幕、动鼠标、敲键盘）完成任意软件任务；这是"给 Agent 一台电脑"的通用形态。</li>
+    <li><strong>深度研究（Deep Research）类任务</strong><br>需要多轮"搜索 → 阅读 → 评估缺口 → 再搜索"的开放式信息收集，最终汇总成报告——无法预知步数的典型场景，正是 Agent 的舒适区。</li>
+  </ol>
+</section>
+
+<section class="card" id="s4">
+  <h2>4. 易混淆点 &amp; 使用边界</h2>
+  <h3>易混淆概念对比</h3>
+  <table>
+    <tr><th>维度</th><th>Agent（智能体）</th><th>Workflow（工作流）</th><th>Chatbot（聊天机器人）</th></tr>
+    <tr><td>流程由谁决定</td><td>LLM 动态决定（控制流在模型手里）</td><td>预设代码路径写死</td><td>固定对话脚本/决策树</td></tr>
+    <tr><td>执行步数</td><td>不可预测，动态终止</td><td>固定</td><td>单轮或固定多轮</td></tr>
+    <tr><td>可预测性 / 一致性</td><td>低</td><td>高</td><td>高</td></tr>
+    <tr><td>成本与延迟</td><td>高（多轮调用累积）</td><td>中</td><td>低</td></tr>
+    <tr><td>适用任务</td><td>开放式、无法预先规划步数</td><td>能清晰分解为固定子任务</td><td>标准问答与咨询</td></tr>
+    <tr><td>典型例子</td><td>编码 Agent、computer use</td><td>提示链、路由、并行投票</td><td>FAQ 客服机器人</td></tr>
+  </table>
+  <p>另一对易混概念：<strong>Agent ≠ 自我进化系统</strong>。ReAct/Reflexion 式的"自我反思"只发生在上下文里，<u>模型参数并没有被更新</u>——它是"把这次失败的教训记在便签上"，不是模型真正学会了新能力。</p>
+  <h3>使用边界与常见误用</h3>
+  <ul>
+    <li><strong>能用简单方案就别用 Agent</strong>：Anthropic 明确指出，多数应用把单次 LLM 调用配合检索和上下文示例优化好就足够了；Agent 用来换灵活性的代价是延迟、成本与错误累积（一步走偏，步步偏——compounding errors）。</li>
+    <li><strong>必须配备工程护栏</strong>：设置终止条件（如最大迭代步数）；工具权限最小化（只给它该用的系统）；关键操作（退款、发邮件、改生产数据）要求人工确认；先在沙箱环境充分测试再上线。</li>
+    <li><strong>常见误用一</strong>：把任何"带工具调用的链路"都叫 Agent——判据是控制流归谁，而不是有没有调工具。</li>
+    <li><strong>常见误用二</strong>：给 Agent 塞几十个工具却不写清楚文档与示例，模型频繁选错工具——工具数量越多，ACI 设计越关键。</li>
+    <li><strong>常见误用三</strong>：在低容错、强合规场景（如直接操作生产数据库、无人工审核的金融交易）让 Agent 全自主执行。</li>
+  </ul>
+</section>
+
+<section class="card" id="s5">
+  <h2>5. 可查证的正规参考来源链接</h2>
+  <p>以下 4 条均经过查证（2026-09-05 检索确认可访问），是本资料核心论断的依据：</p>
+  <ul class="ref">
+    <li><span class="kind">官方工程博客</span><a href="https://www.anthropic.com/engineering/building-effective-agents" target="_blank" rel="noopener">Building effective agents — Anthropic</a><br>—— Workflow 与 Agent 的权威区分、六大模式、生产原则与客服/编码落地案例，本资料的主骨架。</li>
+    <li><span class="kind">技术综述博客</span><a href="https://lilianweng.github.io/posts/2023-06-23-agent/" target="_blank" rel="noopener">LLM Powered Autonomous Agents — Lilian Weng</a><br>—— 规划 / 记忆 / 工具使用三组件框架的出处，Agent 领域引用最广的综述之一。</li>
+    <li><span class="kind">arXiv 论文</span><a href="https://arxiv.org/abs/2210.03629" target="_blank" rel="noopener">ReAct: Synergizing Reasoning and Acting in Language Models — Yao et al., 2022/2023</a><br>—— Agent 运行循环（Thought → Action → Observation）的原始论文。</li>
+    <li><span class="kind">官方示例仓库</span><a href="https://github.com/anthropics/anthropic-cookbook/tree/main/patterns/agents" target="_blank" rel="noopener">anthropic-cookbook · patterns/agents — GitHub</a><br>—— Anthropic 官方可运行的 Agent 参考实现代码，适合动手复现。</li>
+  </ul>
+  <p class="pill">注：模型版本、API 名称演进较快，实际开发请以各官方文档最新版为准。</p>
+</section>
+
+<section class="card" id="s6">
+  <h2>6. 核心思考题</h2>
+  <ol>
+    <li>Anthropic 说"能 Workflow 就不要 Agent"。请想一个你熟悉的具体任务：<strong>灵活性的收益什么时候才值得支付"不可预测 + 成本更高"的代价</strong>？如果能用确定性代码解决 80% 的步骤，剩下的 20% 该交给谁？</li>
+    <li>给 Agent 配工具时，为什么 Anthropic 说<strong>工具接口（ACI）设计的投入甚至超过主提示词</strong>？尝试从"模型只能看见工具描述和参数定义"这一信息不对称的角度解释。</li>
+    <li>"多 Agent 协作一定比单 Agent + 一组好工具更强吗？"——在什么条件下拆分成多 Agent 才有意义？拆分的开销（通信、上下文传递、错误定位）由什么来抵偿？</li>
+  </ol>
+</section>
+
+<section class="card" id="s7">
+  <h2>7. 自测小题（附答案）</h2>
+  <p>先自己作答，再点开对照。覆盖本资料全部易错点。</p>
+
+  <details><summary>第 1 题：Agent 与 Workflow 的本质区别是什么？各举一个适用场景。</summary>
+    <div class="ans"><strong>答案：</strong>本质区别是<strong>执行流程的控制权</strong>——Workflow 由预设代码路径编排 LLM 和工具，Agent 由 LLM 动态决定自己的流程与工具使用。<strong>解析：</strong>可清晰分解为固定子任务的任务（如"生成文案→翻译"）用 Workflow 换取可预测性；无法预知步数的开放式任务（如修一个未知位置的 bug）才用 Agent。</div>
+  </details>
+
+  <details><summary>第 2 题：ReAct 循环的三个环节分别是什么？为什么每一步都需要真实的环境反馈？</summary>
+    <div class="ans"><strong>答案：</strong>Thought（思考）→ Action（调用工具行动）→ Observation（观察环境返回）。<strong>解析：</strong>环境反馈提供 ground truth，让 Agent 能评估真实进度、及时发现并纠正偏差——这是"循环修正"得以成立的前提，只生成计划不观察结果的系统走不完长任务。</div>
+  </details>
+
+  <details><summary>第 3 题：Lilian Weng 框架中 Agent 的三大组件是什么？各自的"短期/长期"或"内部/外部"对应什么？</summary>
+    <div class="ans"><strong>答案：</strong>规划（Planning）、记忆（Memory）、工具使用（Tool Use）。记忆的短期＝上下文窗口内的上下文学习，长期＝外部向量库检索；规划的内部推理靠 CoT/ToT，外部纠错靠 ReAct/Reflexion；工具使用通过函数调用连接模型权重之外的能力。<strong>解析：</strong>三组件回答的是"大脑如何指挥手脚与笔记本"，任何 Agent 框架基本都能映射到这个骨架上。</div>
+  </details>
+
+  <details><summary>第 4 题：生产环境为什么要给 Agent 设置"最大迭代次数"之类的终止条件？至少说出两个理由。</summary>
+    <div class="ans"><strong>答案：</strong>① <strong>错误会累积</strong>：一次幻觉或误判可能被后续步骤放大（compounding errors），无限循环只会越走越偏；② <strong>成本与时间失控</strong>：每一步都是一次 LLM 调用，失去上限意味着账单和延迟不可控。<strong>解析：</strong>Anthropic 建议的配套措施还包括：沙箱环境充分测试、工具权限最小化、关键操作人工确认。</div>
+  </details>
+
+  <details><summary>第 5 题（判断）：Agent 的"自我反思"意味着模型从失败中学习了新能力，参数已经更新。这句话对吗？</summary>
+    <div class="ans"><strong>答案：</strong>错。<strong>解析：</strong>ReAct/Reflexion 式反思只把教训写入<strong>上下文</strong>（便签纸），模型参数没有任何变化；它能改善当前或同类任务的后续表现，但不构成模型本身的长期学习。这是最容易被营销话术模糊掉的边界。</div>
+  </details>
+</section>
+
+<div class="footer">由 concept-learning-generator 项目技能生成 · 2026-09-05 · 仓库：skill-learning-demo · 结构与红线详见 .workbuddy/skills/concept-learning-generator/SKILL.md</div>
+</div>
+</body>
+</html>

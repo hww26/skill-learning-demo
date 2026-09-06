@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-page-node-id="RRfMH2xpsoAD3SQDNaf1na" data-dm-ref="1"><head data-page-node-id="mFiymcdo3RRVQMJfjRevS7">
+<meta charset="UTF-8" data-page-node-id="en6ttbYB77MHdtuDUFfk5I">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" data-page-node-id="Yg7uq6D8tDy7sao91lmyhd">
+<title>Agent · 大模型上下文 · Skill：三者关系学习资料</title>
+<style>
+  :root{--ink:#1f2328;--muted:#656d76;--line:#d8dee4;--accent:#185fa5;--accent-soft:#e6f1fb;--teal:#0f6e56;--teal-soft:#e1f5ee;--amber:#854f0b;--amber-soft:#faeeda;--card:#ffffff;--bg:#f6f8fa}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Segoe UI","Microsoft YaHei",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.75;font-size:15.5px}
+  .wrap{max-width:880px;margin:0 auto;padding:32px 20px 64px}
+  header.hero{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px 32px;margin-bottom:20px}
+  header.hero h1{font-size:26px;font-weight:600;letter-spacing:.5px}
+  header.hero .sub{color:var(--muted);margin-top:6px;font-size:14px}
+  .badge{display:inline-block;background:var(--accent-soft);color:var(--accent);border-radius:6px;padding:2px 10px;font-size:12.5px;margin:12px 6px 0 0}
+  .caliber{background:var(--amber-soft);border-left:4px solid #d9a24a;border-radius:8px;padding:10px 14px;margin-top:16px;font-size:14px;color:var(--amber)}
+  nav.toc{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 24px;margin-bottom:20px}
+  nav.toc h2{font-size:15px;margin-bottom:8px;color:var(--accent)}
+  nav.toc ol{padding-left:22px;columns:2;column-gap:32px}
+  nav.toc li{font-size:14px;margin:3px 0}
+  nav.toc a{color:var(--ink);text-decoration:none;border-bottom:1px dotted var(--line)}
+  nav.toc a:hover{color:var(--accent)}
+  section.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px 30px;margin-bottom:20px;scroll-margin-top:16px}
+  section.card h2{font-size:19px;font-weight:600;padding-left:12px;border-left:4px solid var(--accent);margin-bottom:14px}
+  section.card h3{font-size:15.5px;margin:18px 0 8px;color:var(--accent)}
+  section.card p{margin:8px 0}
+  section.card ul,section.card ol{padding-left:24px;margin:8px 0}
+  section.card li{margin:5px 0}
+  .quote{background:var(--accent-soft);border-radius:10px;padding:12px 16px;margin:10px 0;font-size:14.5px}
+  .analogy{background:var(--teal-soft);border-left:4px solid var(--teal);border-radius:8px;padding:12px 16px;margin:12px 0;font-size:14.5px}
+  table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+  th,td{border:1px solid var(--line);padding:8px 12px;text-align:left;vertical-align:top}
+  th{background:#eef2f6;font-weight:600}
+  tr:nth-child(even) td{background:#fbfcfd}
+  pre{background:#0d1117;color:#e6edf3;border-radius:10px;padding:16px 18px;overflow-x:auto;font-family:Consolas,"Courier New",monospace;font-size:13.5px;line-height:1.6;margin:12px 0}
+  code.inline{background:#eef1f4;border-radius:4px;padding:1px 6px;font-family:Consolas,monospace;font-size:13.5px;color:#b13a5e}
+  .ref{list-style:none;padding-left:0}
+  .ref li{padding:10px 14px;border:1px solid var(--line);border-radius:10px;margin:8px 0;background:#fbfcfd;font-size:14px}
+  .ref a{color:var(--accent);font-weight:600;word-break:break-all}
+  .ref .kind{display:inline-block;font-size:11.5px;background:var(--teal-soft);color:var(--teal);border-radius:4px;padding:1px 8px;margin-right:8px;white-space:nowrap}
+  details{background:#fbfcfd;border:1px solid var(--line);border-radius:10px;padding:10px 16px;margin:10px 0}
+  summary{cursor:pointer;font-weight:600;font-size:14.5px}
+  details[open]{background:var(--accent-soft)}
+  .ans{margin-top:8px;font-size:14px}
+  .footer{color:var(--muted);font-size:12.5px;text-align:center;margin-top:8px}
+  .pill{display:inline-block;font-size:12px;color:var(--muted);background:#eef1f4;border-radius:10px;padding:1px 10px;margin-right:6px}
+  figure.fig{margin:14px 0;text-align:center}
+  figure.fig figcaption{font-size:12.5px;color:var(--muted);margin-top:6px}
+  .case{border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;padding:12px 16px;margin:12px 0;background:#fbfcfd;font-size:14.5px}
+  .case b.tag{color:var(--accent)}
+</style>
+<style id="__dm_no_drag_style__">* { -webkit-user-drag: none !important; }</style><style id="__dm_bindable_badge_style__">[data-sp-bindable="database"]{outline:1px dashed #0088ff;outline-offset:2px;border-radius:4px;}[data-sp-bindable="database"] *{pointer-events:none !important;transition:none !important;animation:none !important;}[data-sp-bindable="database"]{transition:none !important;animation:none !important;}</style></head>
+<body data-page-node-id="TGmBH2C54CEe52CqPNhqee" style="">
+<div class="wrap" data-page-node-id="TyQQfb6LEVcRH81J80y8Dy">
+
+<header class="hero" data-page-node-id="qTRB7kK8OXQsjQN3631ADR">
+  <h1 data-page-node-id="gNlR6ovkq8MumbzVXaffpK">Agent · 大模型上下文 · Skill：三者关系学习资料</h1>
+  <div class="sub" data-page-node-id="9HlglPAxajyWFAyRTLOw0w">《大数据与人工智能》课程 · 概念学习资料 · 由 concept-learning-generator 技能生成</div>
+  <span class="badge" data-page-node-id="vmosQ6Rw7TVerEAJeuhGdR">三者关系</span><span class="badge" data-page-node-id="Je4Zr74wdrwId6DlCwWgG8">Agentic Loop</span><span class="badge" data-page-node-id="ufqwm6Ap0tp6d7xJOjmbSL">Context Engineering</span><span class="badge" data-page-node-id="FsJADKf9RVbvTUe0QLqW0K">Agent Skills</span>
+  <div class="caliber" data-page-node-id="bi54Dx2kpFPBQAZ5mbH07h"><strong data-page-node-id="PljP1sjkvqzaoDY1nTyaGg">定义口径说明：</strong>三个概念均采用 Anthropic 工程博客与 Agent Skills 开放标准的口径——<strong data-page-node-id="9yfYwPmL3xxTdx7ycpIAuf">Agent</strong>：LLM 在循环中基于环境反馈自主使用工具、自己掌控任务完成方式的系统；<strong data-page-node-id="zHdD4g649VXinHBVWKQqIu">大模型上下文（Context）</strong>：每次推理时送入模型的全部 token 集合（系统提示、对话历史、工具结果、检索内容等）；<strong data-page-node-id="uBLeLEhipOTGSmZdTG81gb">Skill</strong>：以 <code class="inline" data-page-node-id="GRzxkaXxgkvL6oz8XAA5MQ">SKILL.md</code> 为核心、通过渐进式披露（progressive disclosure）按需加载的知识与流程文件夹。该领域演进较快，细节以官方文档最新版为准。</div>
+</header>
+
+<nav class="toc" data-page-node-id="S9qS9MhksXBC0fkcgyW1qL">
+  <h2 data-page-node-id="YLAJdmQAJlNLqIHxgorU5G">目录</h2>
+  <ol data-page-node-id="DDuyb6WRGPNYDFHCpD2sEw">
+    <li data-page-node-id="peCXnCjbjsy5V3Er1KptLt"><a href="#goals" data-page-node-id="rzAIC6G64OjkEaETP59Kw6">学习目标</a></li>
+    <li data-page-node-id="nOm6TYZs7au4o2AJXdHtsq"><a href="#s1" data-page-node-id="ESlVcbeOlnJs1ZE1j3HBSP">1. 个人理解解释</a></li>
+    <li data-page-node-id="EL5aV7SYV3nFQbGyweBMHR"><a href="#s2" data-page-node-id="6jLECaZ8EDhaf94CBv5SeK">2. 核心机制 / 组成</a></li>
+    <li data-page-node-id="mPfZSHCWiPhDsuxucIuDS0"><a href="#s3" data-page-node-id="fo4r2KqqOCNDIyCEHcQZ3k">3. 真实落地应用场景</a></li>
+    <li data-page-node-id="tGgzZz7wFg8jBEklXsGuDE"><a href="#s4" data-page-node-id="N44lUYpIdUh54ytGmym0zp">4. 易混淆点 &amp; 使用边界</a></li>
+    <li data-page-node-id="ejzO5knA82YCdtAyCRxORd"><a href="#s5" data-page-node-id="HKjxAwpKHvMurczC7vROq5">5. 可查证的正规参考来源链接</a></li>
+    <li data-page-node-id="4KtLWnjFgk2kLb5nH8pDja"><a href="#s6" data-page-node-id="Fer82DpjivTr7rOB3rw7bI">6. 核心思考题</a></li>
+    <li data-page-node-id="5E7WIFMMQrbxgkAJrCq25d"><a href="#s7" data-page-node-id="zgRHH7LymF2Efuyrh6xL4R">7. 自测小题（附答案）</a></li>
+  </ol>
+</nav>
+
+<section class="card" id="goals" data-page-node-id="ztQf8Kt1hTQ1CVAcmjD9F3">
+  <h2 data-page-node-id="A1Jlu1CSW6jznX9mGV1PsS">学习目标</h2>
+  <ul data-page-node-id="bmnGNAMCglZAb8eH8YX4Hp">
+    <li data-page-node-id="0Y3Ou1KCKNk5VzlIClC71v">学完能够<strong data-page-node-id="pfoZgBkxzumQ8Y80nnlJ5r">用一句话说清三者的分工</strong>：Agent 是动手干活的执行者，上下文是容量有限的工作台，Skill 是按需取用的专家手册。</li>
+    <li data-page-node-id="mfXGIUPU7NDEJbBcAlbYqk">学完能够<strong data-page-node-id="h2lfCCXYP7D7krYDKxXoRy">画出 Agent 的运行循环（agentic loop）</strong>，并指出循环每一步分别在上下文里"读什么、写什么"。</li>
+    <li data-page-node-id="LBHl16r8pxTWyNARc8Kr7U">学完能够<strong data-page-node-id="oRzzlratGnD5ScIvvUKGK1">解释 Skill 的三层渐进式披露</strong>如何化解"知识近乎无限、注意力预算有限"的矛盾。</li>
+    <li data-page-node-id="JRK5r5iQ5KNoAFQRcunNcu">学完能够<strong data-page-node-id="PwBd4Ogazp2v5rDb0fPeZF">辨析两组易混概念</strong>：上下文 vs 记忆/RAG 知识库、Skill vs 工具（Tool/MCP）。</li>
+    <li data-page-node-id="akA5NbeNagfKgasmHHzNzJ">学完能够<strong data-page-node-id="BsBlREVJiVf5RPaL3FkvTH">用"新员工入职"类比</strong>，向别人完整复述三者如何协作完成一次任务。</li>
+  </ul>
+</section>
+
+<section class="card" id="s1" data-page-node-id="NGVbOtbGSCGz5E6EdmxMQd">
+  <h2 data-page-node-id="CHhMtWPgBSCrwqrgOwBuhf">1. 个人理解解释</h2>
+  <p data-page-node-id="utxdMeK2AXDEaVptnvprOw"><strong data-page-node-id="x5UgfEaY6UX1zJB4BqCKlN" style="white-space: pre-wrap; cursor: text;">在我看来，三者的关系可以压缩成一个画面——Agent 是动手干活的"员工"，大模型上下文是他手边那张容量有限的"办公桌"，Skill 是放在档案柜里、做到哪一步才抽出来翻哪页的"专家手册"。员工再聪明，桌面就那么大，不可能摊开公司全部资料；手册再厚，也只有被拿到桌上的那几页才真正起作用。​</strong></p>
+  <div class="analogy" data-page-node-id="EH1txdKmePVsHUkGG0LPn6"><strong data-page-node-id="cNlLYgGVuunC8lvfZs0BZT">类比：新员工入职。</strong>把 Agent 想成一位刚入职的员工：他的"脑力"来自大模型（LLM），但每次思考时真正"摆在面前"的信息——入职手册的目录、和同事的聊天记录、刚跑出来的报表——都必须摊在那张办公桌（上下文窗口）上。桌子面积有限（注意力预算有限），塞得太满反而什么都看不清（context rot，上下文腐烂）。公司则把专业经验整理成一本本操作规程（Skill）：每本的<strong data-page-node-id="ZRk9yLdevLo0aR2buLVPj4">封面和目录（元数据）</strong>钉在工位墙上，他扫一眼就知道什么时候该翻哪本；真接到对应任务，才把那一本的<strong data-page-node-id="KKAQ1DmG7kOsQUeVIYxvYQ">正文</strong>摊到桌上细读；正文里指向的<strong data-page-node-id="e134dEhTYmhGNnvo0zGJTY">附件和模板</strong>，用到了再去档案柜取。三样东西缺一不可：没脑子干不了活，没桌子没地方想，没手册不专业。</div>
+  <h3 data-page-node-id="Raqxc6xwAhidAVPEfazaH1">权威定义的锚点</h3>
+  <div class="quote" data-page-node-id="SxH1j5nfwt7pdSX70b4VnF">三份 Anthropic 官方材料，恰好各给了一块拼图：<br data-page-node-id="xUB9a5Q9nYU7mlybWiyUgw">
+  · <strong data-page-node-id="Vius77qP46aMgB78Q2oSE2">《Building effective agents》</strong>（2024-12）：Agent "本质上就是 LLM 在循环中基于环境反馈使用工具"——这定义了<strong data-page-node-id="ZzX2SAZNvrxAe4Wy4tpMA8">员工怎么干活</strong>；<br data-page-node-id="eEon46aIiqJMtIGEYnKfWj">
+  · <strong data-page-node-id="qOnmtG3jOY427Qg8vzap6d">《Effective context engineering for AI agents》</strong>（2025-09）：上下文是"边际收益递减的有限资源"，工程目标是"找到能最大化期望结果的最小高信号 token 集合"——这定义了<strong data-page-node-id="0Cwfog6GRp4rPSeuSWtlAS">桌子有多大、东西怎么摆</strong>；<br data-page-node-id="B6N3yWwArBybY2Dy7C6gHH">
+  · <strong data-page-node-id="SqcIumPJa1EqZbyEND5DJY">《Equipping agents for the real world with Agent Skills》</strong>（2025-10）：Skill 是"指令、脚本与资源组成的文件夹"，靠渐进式披露按需加载，"能打包进 Skill 的上下文容量实际上不受限"——这定义了<strong data-page-node-id="bmLR8nPd7WOWCtM3iMQ7MJ">手册怎么写、怎么翻</strong>。</div>
+  <h3 data-page-node-id="ypsgLtv7qs4wXaJRt5jQQy">在 AI 技术版图中的位置</h3>
+  <p data-page-node-id="9SG6cjlOA5ffh1X8FbK0l1">三者不是三个并列的功能模块，而是<strong data-page-node-id="c3qGT4FzmrdOwC59lniDCO">同一个系统的三个侧面</strong>：LLM 提供推理能力（引擎），Agent 把推理组织成"行动—反馈"循环（怎么干活），上下文是循环每一轮都必须经营的原材料（在哪干活），Skill 是突破窗口限制、按需注入专业知识的机制（凭什么会干）。可对照本仓库前三份资料：<code class="inline" data-page-node-id="LRzGTFHSEJNJBuawjKDs9Q">agent.html</code> 讲"员工"，<code class="inline" data-page-node-id="I1HPkwXrbNntZ4mIWKpDdP">llm-context.html</code> 讲"桌面"，<code class="inline" data-page-node-id="g3W84pKfaI7ZQHzeOmxQeg">skill.html</code> 讲"手册"——本篇讲的是三者如何<strong data-page-node-id="EgFhenKV2Hvz14TnmjHdJd">咬合成一台机器</strong>。</p>
+</section>
+
+<section class="card" id="s2" data-page-node-id="FeVrtSfm06bYS6L1Nq8Os8">
+  <h2 data-page-node-id="ICSQyEGDEZiGKJEHvpPJzg">2. 核心机制 / 组成</h2>
+  <h3 data-page-node-id="hQqJ2TKT8MGbii83ShEWG4">三者的分工与对应物</h3>
+  <table data-page-node-id="6jYDLxKBZfAZF7CG29bd7s">
+    <tbody><tr data-page-node-id="J3qZEhQ8r9Qh19ZkMrhwZB"><th data-page-node-id="CrlHOWtf2Uymmp7OKjyu1o">角色</th><th data-page-node-id="6apDhaOijwckHovzhUkS0H">一句话定位</th><th data-page-node-id="W928uZbEvg51DLj6ABlZK4">关键机制</th><th data-page-node-id="GhMPVmNp53pjazBHzpCiKu">类比</th></tr>
+    <tr data-page-node-id="aUY2CDTRl9Yk9m9ty3if6r"><td data-page-node-id="94UZ5GmIiY2rr6ULAcAcPG"><strong data-page-node-id="EYqwMc4D8BKShsb1F9Ce7j">Agent</strong></td><td data-page-node-id="vwNNypCw1TO5kAjaDaFn7H">把"想"和"做"连成循环的执行者</td><td data-page-node-id="qXGwAGfrVNYUQdJvZuN0ov">agentic loop：读上下文 → 决策 → 调用工具 → 观察结果 → 继续</td><td data-page-node-id="jNh3qzJf1IXcW4uZP3LFkl">上岗干活的员工</td></tr>
+    <tr data-page-node-id="NTSjsEo3cACOLWCFcNhTWF"><td data-page-node-id="oaCCpp5pnsGo9SChvenocN"><strong data-page-node-id="0rXxfuEDmAatZFr1m17QK1">大模型上下文</strong></td><td data-page-node-id="jLl6kggqJUEUF49lG3BCbe">模型的"工作记忆/工作台"，容量有限</td><td data-page-node-id="EoQnJgteoqJRitmWCXTHeH">注意力预算（attention budget）、context rot、上下文工程（compaction、即时检索、笔记、子代理）</td><td data-page-node-id="gJuPStA1C28F7R0ZUHG7Mr">面积有限的办公桌</td></tr>
+    <tr data-page-node-id="NpP5p8uYCd3DBENxH4x7DK"><td data-page-node-id="WqUCJjeH2TNRAraXiCpb3g"><strong data-page-node-id="HnYyGmgtNu4hR2rxZSy6et">Skill</strong></td><td data-page-node-id="N7cYhgShErNGLqZgcbyooP">住在磁盘上、按需加载的"专家手册"</td><td data-page-node-id="4ue0ut5Gn3en5I9iHu3fL1"><code class="inline" data-page-node-id="CC3mb61GIMBoDmzr5gzGGX">SKILL.md</code>（元数据+正文）+ 捆绑资源；三层渐进式披露</td><td data-page-node-id="6KKCmVD2N9o4pzmWEdLDJv">档案柜里的操作规程</td></tr>
+  </tbody></table>
+  <p data-page-node-id="FTuF1Im4k2ZpAFtVPxn57L">注意分工中的<strong data-page-node-id="CoESa9MLdS9VZBgSIQNEaI">依赖方向</strong>：Agent 循环每一轮都"活在"上下文里——从上下文读入目标与历史，把工具结果写回上下文；而 Skill 的大部分内容<strong data-page-node-id="BlxGuFcEemihHGeNNQnv4T">不在</strong>上下文里，它是对有限工作台的外部扩充。三者的咬合关系是：循环制造信息 → 窗口装不下、装多了会"糊" → Skill 用渐进式披露把知识留在磁盘上，只把"当下这一步"需要的那一层送进窗口。</p>
+  <h3 data-page-node-id="EpiIGBgwzkcDmLOkh2d8u8">运行循环：上下文是每一轮的"现场"</h3>
+  <pre data-page-node-id="8nVcGZ5sLA0OM0vRFnMFGW">while 任务未完成 且 未触发终止条件:
+    # 上下文 = 工作台，每一轮都要重新"策展"
+    思考 = LLM(系统提示 + 技能目录(元数据) + 对话历史 + 上一步观察)
+
+    if 这一步需要专业知识:
+        把对应 SKILL.md 正文读入上下文             # 渐进式披露 · 第二层
+    if 还需要更多细节:
+        把技能捆绑的参考文件读入上下文             # 渐进式披露 · 第三层
+
+    行动 = 调用工具(读文件 / 检索 / 执行代码 / 调API)
+    观察结果 → 写回上下文                          # 上下文逐轮增长
+
+    if 上下文接近窗口上限:
+        压缩摘要 / 写结构化笔记 / 派子代理隔离探索   # 上下文工程三件套
+交付最终结果</pre>
+  <p data-page-node-id="CR0wxA1fOaJtxdgyuoIwF4">每一轮循环都在改写上下文：读走信息做决策，写入新的工具结果。所以上下文不是静态的背景板，而是 Agent 每一步都要<strong data-page-node-id="PwNYJkQKENqmY4tEWT8Cov">主动经营</strong>的稀缺资源——这就是"上下文工程"成为独立工程学科的原因。</p>
+  <h3 data-page-node-id="PP9qEz7FHlDZQG7LPYOp1g">Skill 如何"挤进"有限的工作台：渐进式披露</h3>
+  <table data-page-node-id="kZTbE5jvE2xVxq0ra59tup">
+    <tbody><tr data-page-node-id="e0KvzJxL50iyaiF7G5yQw7"><th data-page-node-id="5xgERR7gjYGgFj1yICAasf">层级</th><th data-page-node-id="knPjMp8lADwvLrg3pZjJVK">内容</th><th data-page-node-id="qKDVANHUL5OPks42YECFHw">何时进入上下文</th><th data-page-node-id="hvozOtaLzy1gNtfwoqWxGf">占用情况</th></tr>
+    <tr data-page-node-id="YLLFJcIt6BN9QNbchHfQLt"><td data-page-node-id="xAGE16FouCnA2aVeAjlyGo"><strong data-page-node-id="GU6l4ffeisx8gfoOcMTE4n">第一层 · 元数据</strong></td><td data-page-node-id="wWkUERVkiqjTfECBGpZI1A"><code class="inline" data-page-node-id="ymIEEuRpSo3ppBLFOkAI77">SKILL.md</code> 头部的 <code class="inline" data-page-node-id="RsgqJFO95rM2PSDSj5rHSe">name</code> + <code class="inline" data-page-node-id="oMLsQPIDmoKlHLHsHA8FKQ">description</code></td><td data-page-node-id="U9ugu2YUd7nn7nYfIrC8uU">启动时预加载，<strong data-page-node-id="h0tTJhhWyqNOBytJbU5k4f">常驻</strong>系统提示</td><td data-page-node-id="7Z5C8iIJDIhdW1qHhmK3Ut">极小（仅够让 Agent 判断"何时该用我"，描述字段有长度上限约束）</td></tr>
+    <tr data-page-node-id="K3YRXB3mWv47QhCZ1yLeZ3"><td data-page-node-id="OxBIRVFHA5GEXP9ENZzWGW"><strong data-page-node-id="s6scoQnE9ikarwGcxrw1DE">第二层 · 正文</strong></td><td data-page-node-id="Pl4T4r0CSCE0009Y7Ju8lN"><code class="inline" data-page-node-id="ndOYS93MCPvoJG91P7apaD">SKILL.md</code> 的操作指引主体</td><td data-page-node-id="7hq2iAZCHDMAcv7lVtBLvr">Agent 判断与当前任务相关时，主动读取文件</td><td data-page-node-id="LIknCeb3RsqYDsgbwj2j8O">中等，只在任务相关时存在</td></tr>
+    <tr data-page-node-id="wAdTWcrFik4gnEoOYC7e0g"><td data-page-node-id="oLwegRoSfSdMS54E2UrQGz"><strong data-page-node-id="1CzkinIZ9PfHADOTZsrVh8">第三层 · 捆绑资源</strong></td><td data-page-node-id="xDYezDTb9LdpiDAFk35jp6">参考文件、脚本、模板等</td><td data-page-node-id="FXtDxproAOeQYOdoJwdBBh">Agent 按需自主发现并读取</td><td data-page-node-id="0qTuBld0nebKuYrEQnGhGG">可以很大，但只在用到的那几步进入窗口</td></tr>
+  </tbody></table>
+  <p data-page-node-id="ob4yLZkIgn8q1AHYUlMdnb">正因如此，官方文章才说"能打包进 Skill 的上下文容量实际上不受限"——知识本体住在磁盘上，窗口里永远只出现它的<strong data-page-node-id="4qBg7mSRU7Tdw3bv4O6SEW">当前需要的那一层</strong>。</p>
+  <figure class="fig" data-page-node-id="n8S96MJWlV0PcABB5ggwFm">
+  <svg viewBox="0 0 760 420" width="100%" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Microsoft YaHei, sans-serif" role="img" aria-label="三者关系示意图：Skill 文件夹通过渐进式披露按需加载进上下文窗口，Agent 在循环中读写上下文并调用外部工具" data-page-node-id="N4zMBmXtgdTHtk3JnjxvMh">
+    <defs data-page-node-id="VX0OWkJysuCNxDw7yZ8T2s">
+      <marker id="arB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse" data-page-node-id="NYy5yZHxut48EJfGTIR1M0"><path d="M0,0 L10,5 L0,10 z" fill="#185fa5" data-page-node-id="8Hrh3wzY1g0mTscSKLBmkm"></path></marker>
+      <marker id="arT" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse" data-page-node-id="02QtpAECkD5S6jWc7Ceci3"><path d="M0,0 L10,5 L0,10 z" fill="#0f6e56" data-page-node-id="CcbCYfviFJPlc30d1Enoxw"></path></marker>
+      <marker id="arA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse" data-page-node-id="LB0rMJJJjQUPCrf1Ov513C"><path d="M0,0 L10,5 L0,10 z" fill="#d9a24a" data-page-node-id="FZwGPpiLB3uVY5D69sEOx5"></path></marker>
+      <marker id="arG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse" data-page-node-id="x1BjOC74J968jiCNVHMljy"><path d="M0,0 L10,5 L0,10 z" fill="#656d76" data-page-node-id="aCzlCootRtpq4EazkWGfaF"></path></marker>
+    </defs>
+    <!-- LLM 大脑 -->
+    <rect x="280" y="16" width="200" height="42" rx="10" fill="#185fa5" data-page-node-id="GrDT4hEWwOZbDzw2eHvRfO"></rect>
+    <text x="380" y="43" text-anchor="middle" font-size="15" font-weight="600" fill="#ffffff" data-page-node-id="XthBSJzVbYOIGkhGxIlit1">大模型 LLM（大脑）</text>
+    <!-- LLM <-> Context 双向 -->
+    <line x1="358" y1="58" x2="358" y2="84" stroke="#185fa5" stroke-width="1.8" marker-end="url(#arB)" data-page-node-id="31G24HOVrgfGscLGYCeIN3"></line>
+    <line x1="402" y1="84" x2="402" y2="58" stroke="#185fa5" stroke-width="1.8" marker-end="url(#arB)" data-page-node-id="P5dZHFNot3PVRCPtq4qaVD"></line>
+    <text x="412" y="78" font-size="10.5" fill="#656d76" data-page-node-id="44diBKr9nDp8SG6H3b6WkD">每轮读取 / 写回</text>
+    <!-- 上下文窗口 -->
+    <rect x="215" y="86" width="350" height="180" rx="12" fill="#e1f5ee" stroke="#0f6e56" stroke-width="1.6" data-page-node-id="dVYtaRMAlUUsoE5H9dOPmb"></rect>
+    <text x="390" y="110" text-anchor="middle" font-size="13.5" font-weight="600" fill="#0f6e56" data-page-node-id="oJD2eBbiu6nhWwP6A1EkMC">上下文窗口 Context（有限的工作台）</text>
+    <rect x="230" y="122" width="320" height="36" rx="6" fill="#ffffff" stroke="#9fd4c0" data-page-node-id="TBQBwHMs7roaUrdmWruwfu"></rect>
+    <text x="390" y="145" text-anchor="middle" font-size="12" fill="#1f2328" data-page-node-id="sMIDuByl4eekFFikqQI0wj">系统提示 + 技能目录（元数据 · 常驻）</text>
+    <rect x="230" y="164" width="320" height="36" rx="6" fill="#ffffff" stroke="#9fd4c0" data-page-node-id="zAIUxosK7Yfxjw8nw7myqU"></rect>
+    <text x="390" y="187" text-anchor="middle" font-size="12" fill="#1f2328" data-page-node-id="8nkhC827Tdc3hicuBtMwt6">对话历史 · 工具结果（逐轮增长）</text>
+    <rect x="230" y="206" width="320" height="36" rx="6" fill="#ffffff" stroke="#9fd4c0" data-page-node-id="4eEhvJVjZkYHJgrmRG5JO3"></rect>
+    <text x="390" y="229" text-anchor="middle" font-size="12" fill="#1f2328" data-page-node-id="DuzHQ24MDGcShSasUAFB1Q">技能正文 / 参考文件（按需载入）</text>
+    <text x="390" y="257" text-anchor="middle" font-size="11" fill="#0f6e56" data-page-node-id="BHBqCn4OBayqeCjf3NpjeR">注意力预算有限 → 信息越多，召回越"糊"（context rot）</text>
+    <!-- Skill 文件夹 -->
+    <rect x="15" y="86" width="150" height="180" rx="12" fill="#faeeda" stroke="#d9a24a" stroke-width="1.6" data-page-node-id="wiF9H6HgLSxKADtnYnIXgD"></rect>
+    <text x="90" y="110" text-anchor="middle" font-size="13.5" font-weight="600" fill="#854f0b" data-page-node-id="eCazFoKkSXMkxegqti13LV">Skill 文件夹</text>
+    <text x="90" y="127" text-anchor="middle" font-size="10.5" fill="#854f0b" data-page-node-id="UdpoyulGoAiNPuXHwstnsX">（磁盘上，不占窗口）</text>
+    <text x="90" y="152" text-anchor="middle" font-size="10.5" fill="#1f2328" data-page-node-id="2we6QpfcuCzxc8ydDWdMeM">SKILL.md（元数据+正文）</text>
+    <text x="90" y="172" text-anchor="middle" font-size="10.5" fill="#1f2328" data-page-node-id="m5GQiPLjD0vJmnA9MYMX94">参考文件 reference.md</text>
+    <text x="90" y="192" text-anchor="middle" font-size="10.5" fill="#1f2328" data-page-node-id="l64tjFhs2wtkM2sYtXU4hP">脚本 scripts/</text>
+    <text x="90" y="212" text-anchor="middle" font-size="10.5" fill="#1f2328" data-page-node-id="GYPCwPAPxSMUeuaaViDTsE">模板 assets/</text>
+    <text x="90" y="248" text-anchor="middle" font-size="10.5" fill="#854f0b" data-page-node-id="3DaRrh4WATZGKZ9RlG7isA">类比：档案柜里的专家手册</text>
+    <!-- Skill -> Context 渐进式披露 -->
+    <line x1="165" y1="176" x2="213" y2="176" stroke="#d9a24a" stroke-width="1.8" marker-end="url(#arA)" data-page-node-id="njJEqCjDIbeytwb2YZZdRX"></line>
+    <text x="189" y="163" text-anchor="middle" font-size="10" fill="#854f0b" data-page-node-id="1BegvEBvpVBFIm9x7IgrHG">渐进式披露</text>
+    <text x="189" y="193" text-anchor="middle" font-size="10" fill="#854f0b" data-page-node-id="tbxC6etwczbSM2YYl8gQZG">按需加载</text>
+    <!-- Agent 循环 -->
+    <rect x="600" y="86" width="145" height="180" rx="12" fill="#e6f1fb" stroke="#185fa5" stroke-width="1.6" data-page-node-id="IXIMRkLgTNdM5MwXK8F6mt"></rect>
+    <text x="672" y="110" text-anchor="middle" font-size="13.5" font-weight="600" fill="#185fa5" data-page-node-id="r2ly9rVSOb3s6cHmjbLhfc">Agent = 循环</text>
+    <text x="672" y="136" text-anchor="middle" font-size="11.5" fill="#1f2328" data-page-node-id="ErAiT1HNxCjqRfzXsneGTY">① 读上下文 / 技能</text>
+    <text x="672" y="153" text-anchor="middle" font-size="11" fill="#656d76" data-page-node-id="yGrkliqyFzIZ3ERcr4QDg9">↓</text>
+    <text x="672" y="170" text-anchor="middle" font-size="11.5" fill="#1f2328" data-page-node-id="9FnHloZLAhinIfvOQJSy8h">② 思考决策（LLM）</text>
+    <text x="672" y="187" text-anchor="middle" font-size="11" fill="#656d76" data-page-node-id="veAVJgDWgAFmlbVQXVFa7g">↓</text>
+    <text x="672" y="204" text-anchor="middle" font-size="11.5" fill="#1f2328" data-page-node-id="l5PFuFh4OlH5XK4yvnJ0jq">③ 行动 · 调用工具</text>
+    <text x="672" y="221" text-anchor="middle" font-size="11" fill="#656d76" data-page-node-id="BVONBonDI0ez50WsafcfPe">↓</text>
+    <text x="672" y="238" text-anchor="middle" font-size="11.5" fill="#1f2328" data-page-node-id="lFleOYRDQGYJ6LZ6snB93r">④ 观察结果</text>
+    <text x="672" y="256" text-anchor="middle" font-size="10.5" fill="#185fa5" data-page-node-id="jesSYGFWB2wh9GdcB07ABZ">↺ 回到 ① 直至完成</text>
+    <text x="672" y="280" text-anchor="middle" font-size="10.5" fill="#185fa5" data-page-node-id="iruaETw3cv2u0fB20g2APP">类比：照规程干活的员工</text>
+    <!-- 外部世界 -->
+    <rect x="280" y="322" width="200" height="42" rx="10" fill="#f6f8fa" stroke="#656d76" stroke-dasharray="5 4" data-page-node-id="IW1UkXY1lc1SASMetrjEll"></rect>
+    <text x="380" y="349" text-anchor="middle" font-size="13" fill="#1f2328" data-page-node-id="rnjPyi0iCeDiWEUTiBatxF">外部世界：文件 / API / 代码执行</text>
+    <line x1="350" y1="268" x2="350" y2="320" stroke="#656d76" stroke-width="1.6" marker-end="url(#arG)" data-page-node-id="TeEOWCywjYL6ct7xQzXjMF"></line>
+    <text x="342" y="298" text-anchor="end" font-size="10.5" fill="#656d76" data-page-node-id="I4UV2PWdKZHzM144u5NkOz">调用</text>
+    <line x1="410" y1="320" x2="410" y2="268" stroke="#656d76" stroke-width="1.6" marker-end="url(#arG)" data-page-node-id="sNyVzqWdMmoH4LCbW3sJdW"></line>
+    <text x="420" y="298" text-anchor="start" font-size="10.5" fill="#656d76" data-page-node-id="bw4t3dVOCM6k6zrCNRG3Mg">结果写回</text>
+    <!-- 底部说明 -->
+    <text x="380" y="400" text-anchor="middle" font-size="12.5" fill="#656d76" data-page-node-id="18AJshKWTi45ivck4aBOlc">一次任务 = Agent 在循环中经营这张有限的工作台；Skill 决定它在何时、变成哪个领域的专家</text>
+  </svg>
+  <figcaption data-page-node-id="pk0yeqjRtK5GSwykhl7RM0">图：三者协作全景——Skill（左）经渐进式披露按需加载进上下文窗口（中）；Agent（右）在循环中读写窗口并调用外部工具；LLM 是驱动决策的大脑。</figcaption>
+  </figure>
+</section>
+
+<section class="card" id="s3" data-page-node-id="i4rSd6TEMPre4iR2cbtCAA">
+  <h2 data-page-node-id="h7NLz3ViuJsETs0ow48oBR">3. 真实落地应用场景</h2>
+  <div class="case" data-page-node-id="wU9LKQZEfb6k2gECc9qWfX"><b class="tag" data-page-node-id="G1R1iH0gcFoIROy1G9uYnV">案例 1 · Claude Code（编码智能体）：</b>三者协作的教科书案例。项目说明 <code class="inline" data-page-node-id="j8qE3Hpp8tzniNj6JPUbZ6">CLAUDE.md</code> 预置进上下文；<code class="inline" data-page-node-id="w0xyGqnD2chnw657Qg8Gm6">glob</code>/<code class="inline" data-page-node-id="T8b6vxmEXK7vwQNWIZKltj">grep</code> 让模型在文件系统上<strong data-page-node-id="GeEd2sIVJfBgEAEofK8a2B">即时检索</strong>（just-in-time retrieval），而不是把整个代码库塞进窗口；接近窗口上限时自动<strong data-page-node-id="dFv3OjImlmOgqW1T1EaUVP">压缩</strong>（compaction），保留架构决策与未解决的 bug；复杂的并行探索交给<strong data-page-node-id="vqDW54rRDiqO3gK2F0WBbB">子代理</strong>（sub-agent）——它们用干净的窗口干活，只带回 1,000–2,000 token 的精炼摘要。上下文工程的四种策略在一个产品里集齐。（来源：《Effective context engineering for AI agents》）</div>
+  <div class="case" data-page-node-id="P1vst0EQxdugnYF29ZHFVi"><b class="tag" data-page-node-id="oFSWNgXOnKW2vbGEKBCH2W">案例 2 · Agent Skills 开放标准与官方仓库：</b>Claude 的文档创建能力（docx/pdf/pptx/xlsx）底层就是几个以"文件夹 + <code class="inline" data-page-node-id="NuOq2Nnb3ui0ziGc0FvNu2">SKILL.md</code>"形式安装的 Skill；元数据常驻系统提示，正文与捆绑资源按需读取。2025 年 12 月起 Agent Skills 成为开放标准（agentskills.io），同一份技能文件夹可跨平台移植。（来源：《Equipping agents…with Agent Skills》与 anthropics/skills 仓库）</div>
+  <div class="case" data-page-node-id="1nm2W1UDl5OEX59KXdSO5W"><b class="tag" data-page-node-id="HGYD6VhrDTER9qApJVrtgN">案例 3 · Claude 玩《宝可梦》：</b>Agent 在数千游戏步数中把关键状态写成<strong data-page-node-id="txGGGmscw5J3y4q1IyAluo">结构化笔记</strong>持久化到上下文之外，窗口重置后读取自己的笔记继续训练数小时——说明"办公桌"之外还可以自建"档案柜"，这就是 Agentic Memory（代理记忆）。（来源：《Effective context engineering for AI agents》）</div>
+  <div class="case" data-page-node-id="bNM9CcM3h3h58SgHX7busI"><b class="tag" data-page-node-id="4suLHxFHgGl6K4HZaCL8KO">案例 4 · 本仓库自身：</b><code class="inline" data-page-node-id="QaiOkqwU8McqQNZgSm1pkN">.workbuddy/skills/concept-learning-generator/</code> 就是一个项目级 Skill——Agent 平时只看得到它的 name + description（第一层），接到"生成学习资料"任务才读取 <code class="inline" data-page-node-id="bG9HM5yk1FQFaKFnHBBAYQ">SKILL.md</code> 正文（第二层）。<code class="inline" data-page-node-id="K1p4qjrOOQc9aslXRFAgGn">learning-materials/</code> 里前三份资料与本篇，都是这套机制跑出来的结果。三者关系不在远方，就在你正在用的系统里。</div>
+</section>
+
+<section class="card" id="s4" data-page-node-id="mEvaIwAxpKS7uRih7JOUmp">
+  <h2 data-page-node-id="QKYCRzA3RDrDijl5GDLFFJ">4. 易混淆点 &amp; 使用边界</h2>
+  <h3 data-page-node-id="vdZTxeWBL9Dqd0n1L6QqaB">易混淆一：上下文（Context） vs 长期记忆 / RAG 知识库</h3>
+  <table data-page-node-id="CnQrdETbGdySs6Vb4sTBf6">
+    <tbody><tr data-page-node-id="vKGXTcdPeQoq10KO6uiYDl"><th data-page-node-id="kAaKBCvYn3XRdcWg7cg3Ic">维度</th><th data-page-node-id="1N9yVBfGiPnyz6yDQ88QQD">大模型上下文 Context</th><th data-page-node-id="sAB8WNr4TboPgK6jLp4Sd0">长期记忆 / RAG 知识库</th></tr>
+    <tr data-page-node-id="BLrciHnwqpWFQvtHYAjz8g"><td data-page-node-id="wCGClMckLQP5XF1C5ZX3bA">位置</td><td data-page-node-id="R0WM2Sqcp85XErL1iTwAZW">推理"现场"，模型直接可见</td><td data-page-node-id="FrVcXmFhtVULEoX5HBg8VE">窗口之外（文件、向量库、数据库）</td></tr>
+    <tr data-page-node-id="VelZH6ZL0OWofF3KyOYEFq"><td data-page-node-id="tNyGL4Ek0QF8uaDcdQ466a">生命周期</td><td data-page-node-id="DxCvMIUrXHAZ4jpEfAZwPz">随一次会话/一轮请求存在</td><td data-page-node-id="w22X7495qlntB5u8Cu2fmo">跨会话持久</td></tr>
+    <tr data-page-node-id="hk2gEyLGy7By9WxqQLhVk5"><td data-page-node-id="pz8FyCUQkafRtEmHgHiYDI">容量</td><td data-page-node-id="qxjGDcLwKC7WG68qWeMRYg">有限（注意力预算，受 context rot 制约）</td><td data-page-node-id="oXAFmipYIHI2243hBO1EyE">近乎无限</td></tr>
+    <tr data-page-node-id="f0svoo3nxqT3fy4z04WZAo"><td data-page-node-id="9IguAO6mjuV6Ip9Q8VIEcQ">进入方式</td><td data-page-node-id="2jkmXpO4s0bjwuzUR4W51n">天然就在，无需动作</td><td data-page-node-id="v6J0bPxbuusCgXhGKvIEC1">必须靠检索/读取"搬进来"</td></tr>
+  </tbody></table>
+  <p data-page-node-id="yNhdEXEzTSExGyiUD0XRso">一句话：RAG 和记忆是给上下文"进货"的仓库，<strong data-page-node-id="l7ZA60TctmEEJRCLfTWd5i">上下文才是货架</strong>——进了仓库不等于上了货架。</p>
+  <h3 data-page-node-id="y8Fcc0n6G8KsjTBRAw89SW">易混淆二：Skill vs 工具（Tool / MCP）</h3>
+  <table data-page-node-id="1vN08AIP0cR8Cx4gwTjmwI">
+    <tbody><tr data-page-node-id="HH4tqYHFUSTKmxQhwLWlkd"><th data-page-node-id="MniA27C5IPfd2qGx55lJ9o">维度</th><th data-page-node-id="jAJKhpuiHoDkzALkDHjTak">Skill</th><th data-page-node-id="QyB4FeextENhFnFvkeRxfj">工具 Tool / MCP</th></tr>
+    <tr data-page-node-id="ZtkAAZVvMpsNemlS54OVCa"><td data-page-node-id="oxF16ERA955mfnZJmBCIEN">本质</td><td data-page-node-id="PIyGCO5yHBrMEtGponam5U">知识包：教 Agent "这类事该怎么想、怎么做的流程"</td><td data-page-node-id="VkwQNzAQ8XOVWxPqqBTCB5">接口：给 Agent "手"，连接外部世界（执行动作）</td></tr>
+    <tr data-page-node-id="dwBvEzBFMFVkUGpazkc7dq"><td data-page-node-id="zR56AUzaYppxzNeIsR8hPd">内容</td><td data-page-node-id="FDFHh9EuZQImc8GalkNKPq">指令、流程、脚本、模板、参考文件</td><td data-page-node-id="HhVmMasnH6U55HyVJLg1Ye">函数/API 定义（名称、参数、说明）</td></tr>
+    <tr data-page-node-id="yDuteThHCVhEIbYkUgATt8"><td data-page-node-id="CqZ8LbY7NxQ07RbeBimZyb">占上下文方式</td><td data-page-node-id="aG8NBaAGo3rRMnXQRWXNEL">三层渐进式披露，正文与资源按需加载</td><td data-page-node-id="bkHtETSatOKciNY5oJ9V0A">工具定义常驻系统提示（每轮可见）</td></tr>
+  </tbody></table>
+  <p data-page-node-id="z0tEi31ZaDJ6hxQTUt7zu1">一句话：Skill 与工具不是竞争关系，而是<strong data-page-node-id="zKH89FAahKpTF7M8buYQ1A">"脑外知识"与"手"</strong>的关系——Skill 里经常教的正是"如何用好这一组工具"。</p>
+  <h3 data-page-node-id="TBx85SCt5zfsRavwOqZ625">易混淆三：Agent vs Workflow（一句话回顾）</h3>
+  <p data-page-node-id="N2M74Qweb19A7gvtZWFA4C">控制流由 LLM <strong data-page-node-id="tHbyFnqlDcAvGQ2TnOIOqD">现场决定</strong>的是 Agent；控制流被代码<strong data-page-node-id="0SaPa2FFdiy4nSBvR9yzAC">预先写死</strong>的是 Workflow。前者的灵活性与不可预测性是同一枚硬币的两面。</p>
+  <h3 data-page-node-id="hAvwXx4zRxhZXYx4piK8zE">使用边界</h3>
+  <ul data-page-node-id="w6IAxeXFQylA857FvRL9DG">
+    <li data-page-node-id="9aVTTfcRSOV8CbTUXrxQDv"><strong data-page-node-id="cCkqTd62yUtYJYwK2nkYxS">Skill 不是自动生效的外挂</strong>：Agent 环境必须支持文件读取/代码执行；且 <code class="inline" data-page-node-id="TWTFODFvy0YdxuMYM64r6x">SKILL.md</code> 的 description 必须写清"什么时候用我"——描述含糊，Agent 在第一层就错过了它，后面两层再精彩也不会被加载。</li>
+    <li data-page-node-id="NG7LCyB6hb0e5Ve7HINxRd"><strong data-page-node-id="up4Erxa9AHDmCHxLxh8eMu">不是所有任务都值得上"全家桶"</strong>：单轮问答用直接提示词即可；Anthropic 的建议是 <em data-page-node-id="hrdqecE3EJHZvy1XmzcqTz">do the simplest thing that works</em>——复杂度只在可证明改善结果时才增加。</li>
+    <li data-page-node-id="Bb4AQYgpeHpx0QZFJsO2gd"><strong data-page-node-id="H9DO84SEY0GFd5lHXkQGko">上下文工程不是越省越好</strong>：过度压缩会丢掉"事后才显重要"的细节；官方建议先最大化召回率，再迭代提升精确率。</li>
+    <li data-page-node-id="COHp5U0obLXQfzTXmEhZMx"><strong data-page-node-id="C97Td2VVH3tQP1euReIrnI">窗口变大 ≠ 问题消失</strong>：即使百万 token 级窗口，context rot 依然存在——"最小高信号 token 集合"仍是指导原则，Skill 的按需加载逻辑不因窗口扩容而过时。</li>
+  </ul>
+</section>
+
+<section class="card" id="s5" data-page-node-id="Hk1citMRX8oKt1YBU3vOle">
+  <h2 data-page-node-id="898z981pGsPb42E8PT39r9">5. 可查证的正规参考来源链接</h2>
+  <ul class="ref" data-page-node-id="0fKxgbMtr7e8pAxqO8QqTh">
+    <li data-page-node-id="fyH4AENZDvBOJQBfiMCT9z"><span class="kind" data-page-node-id="zwjR4V1d8LpMojyrDrfCCM">官方博客</span><a href="https://www.anthropic.com/engineering/building-effective-agents" data-page-node-id="hxr4yBtNXlpnCh2PSTe487">Building effective agents</a> —— Anthropic 工程博客（2024-12-19）：Agent 与 Workflow 的界定、agentic loop 定义、三条工程原则</li>
+    <li data-page-node-id="oUAqWSkUgzYJPc3WlOmcGm"><span class="kind" data-page-node-id="oYxOOqmxMWY53Rw7rycP9B">官方博客</span><a href="https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents" data-page-node-id="0wPKHzZEKFQanJT1DFdEGL">Effective context engineering for AI agents</a> —— Anthropic 工程博客（2025-09-29）：注意力预算、context rot、压缩/笔记/子代理等上下文策略</li>
+    <li data-page-node-id="mJwzgGcvadA3CkdrgwIBmb"><span class="kind" data-page-node-id="TdzUibP6IASOLAZMxu6LF7">官方博客</span><a href="https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills" data-page-node-id="RrGjdAsvceKn6WerKMimPq">Equipping agents for the real world with Agent Skills</a> —— Anthropic 工程博客（2025-10-16，2025-12 更新为开放标准）：Skill 结构与三层渐进式披露</li>
+    <li data-page-node-id="mB7zfCFNmIJXZkqw4HADRC"><span class="kind" data-page-node-id="BRwWQDWikRFPE3DtFKHgo9">官方仓库</span><a href="https://github.com/anthropics/skills" data-page-node-id="koe9stAcGHEsTf91qXuAmf">anthropics/skills</a> —— Anthropic 官方 Skills 仓库：SKILL.md 模板、规范（spec）与 docx/pdf/pptx/xlsx 等生产级示例</li>
+    <li data-page-node-id="6HBrlyBKa9MorRuOxlFiM0"><span class="kind" data-page-node-id="KBv5nobDeRu8YuAlVSszYG">论文</span><a href="https://arxiv.org/abs/2210.03629" data-page-node-id="LuSUkHjnuXvQXafSedcjeD">ReAct: Synergizing Reasoning and Acting in Language Models</a> —— ICLR 2023（Yao et al.）：Agent"推理+行动"交替循环的学术源头</li>
+  </ul>
+</section>
+
+<section class="card" id="s6" data-page-node-id="2F5Jd9BlSC9x4wW4TaEtfu">
+  <h2 data-page-node-id="N9MDBKbuDISToF198oWsGA">6. 核心思考题</h2>
+  <ol data-page-node-id="VZD3KcSfwtEYF2GqvKc6Su">
+    <li data-page-node-id="Z713LZozWZH4fByfyya0Us">上下文窗口正越做越大（百万 token 级）。如果窗口"无限大"，上下文工程和 Skill 的渐进式披露还有存在的必要吗？请用"注意力预算 / context rot"的机制（而不是窗口数字）论证你的结论。</li>
+    <li data-page-node-id="oAw5CS5Li92fMBVuNPpa7Z">假设你要为一个日程管理 Agent 编写"会议安排" Skill：哪些内容应放进 <code class="inline" data-page-node-id="9qZbmRZBlRz5bi8QFVBVLL">SKILL.md</code> 正文（第二层），哪些应拆到第三层参考文件？你的取舍依据是什么？（提示：判断"相关"的频率 × 加载成本）</li>
+    <li data-page-node-id="Bn2joENXI8t6hBZFi3blu8">工具调用结果动辄上万 token，长任务的窗口必然告急：压缩（compaction）、写笔记（note-taking）、子代理（sub-agent）三种策略各自适合什么场景？如果强行只用其中一种，分别会出什么问题？</li>
+  </ol>
+</section>
+
+<section class="card" id="s7" data-page-node-id="vY6xMYI6zcSCNIBxOi31WZ">
+  <h2 data-page-node-id="p8J1Zu5H0LtXtb2YqR8PUa">7. 自测小题（附答案）</h2>
+  <ol data-page-node-id="4rrhFouv9wyw5spxlk8tFw">
+    <li data-page-node-id="KE5eWPPkU5wYVgOyCG8jhb"><strong data-page-node-id="B8m16rGo9pJl38pmfk9DzP">判断题</strong>：上下文窗口越大，模型对窗口内<strong data-page-node-id="AQbk0BJ9GC4hS6fA2JUOmB">任意位置</strong>信息的召回精度就越高。</li>
+    <li data-page-node-id="RIq2iFvzzEjIN5ZoIOpF4g"><strong data-page-node-id="1KNOq0qLfF1Kbko72RE4op">简答题</strong>：Agent 与 Workflow 的本质区别是什么？</li>
+    <li data-page-node-id="Q3PP8r4uszNYvTzjTGgqVx"><strong data-page-node-id="u9nzeL1q50fLJ0CPBzsCDk">简答题</strong>：一个 Skill 安装后，它的哪部分内容常驻上下文？<code class="inline" data-page-node-id="9H44Qm8xbx066C0kPlF2N8">SKILL.md</code> 正文在什么时候才进入上下文？</li>
+    <li data-page-node-id="B8XNkeRengmB9bCQkKgIjd"><strong data-page-node-id="47RRhLOaRg8I0b112c0ILL">简答题</strong>：向量知识库检索（RAG）的结果算上下文的一部分吗？它和 Skill 第三层的"按需加载"有何异同？</li>
+    <li data-page-node-id="ddtIBHCLTeQFYMYsDDlkwX"><strong data-page-node-id="SfBNVFE4OtZc276GekJXrA">简答题</strong>：用"办公室"类比说出三者的对应物，并给出至少一处"<strong data-page-node-id="siTZSPNsNYtVgf3v6OlWgE">类比必须映射回机制</strong>"的对应关系。</li>
+  </ol>
+  <details data-page-node-id="EcOkMcsvBfJ854QH6NwR3v">
+    <summary data-page-node-id="pgjZn9TFgfEn5SxnXuFI1M">点开查看全部答案与解析</summary>
+    <div class="ans" data-page-node-id="98nhCK6wgXFCxnzUqg5cpb">
+      <ol data-page-node-id="IBMGyYQnzWq6ByD3xw58im">
+        <li data-page-node-id="YfvGqcqqFdAh8JQTiERFwh"><strong data-page-node-id="yJNRA8ndws4qG9344mcx8O">错。</strong>窗口容量与召回精度是两回事：受注意力预算与 context rot 影响，token 越多成对关系越"拉伸"，长程召回精度下降——性能是"梯度"而非"悬崖"，容量翻倍不等于精度不降。</li>
+        <li data-page-node-id="O3FRnq5RGHCLOVlI0d9vXm">控制流由谁决定：Agent 的执行流程与工具使用由 <strong data-page-node-id="loBWUzkq9Lt6i2WVOiPkKb">LLM 动态主导</strong>（在循环中根据环境反馈自主决定下一步）；Workflow 由<strong data-page-node-id="bVMwNeGUqF8ocWetOnLA9T">预定义代码路径</strong>编排。</li>
+        <li data-page-node-id="LK0Ljq8FI3V90nsKZjliTS">常驻的是<strong data-page-node-id="hDSKYAnA8DnKz5KgXIzOqU">第一层元数据</strong>（name + description，随系统提示加载）；正文（第二层）要等 <strong data-page-node-id="xy5xvFqPSH5i2unEgqqCgR">Agent 判断该技能与当前任务相关时主动读取</strong>才进入上下文。</li>
+        <li data-page-node-id="GXPFpuJyEZu7wxGuXKVGat">算——检索结果被拼进模型输入后就是上下文的一部分。相同点：都遵循"需要时才进窗口"的按需思想；不同点：RAG 靠<strong data-page-node-id="I3n7Dog92kGjkj3igWCjKW">相似度算法</strong>召回，Skill 靠 <strong data-page-node-id="IgAZItzdczCccDLYZmAC6A">Agent 自主探索</strong>目录与文件名来发现，主动权在 Agent 手里。</li>
+        <li data-page-node-id="7TFITpEUC1hdvC68AgEVzm">员工=Agent（循环执行者），办公桌=上下文（有限工作台），档案柜里的手册=Skill（按需取用）。映射回机制的例子：桌子大小=注意力预算；摊满桌子反而找不到东西=context rot；封面目录钉在墙上=元数据常驻系统提示；用到哪页才翻哪页=第二、三层按需加载；把资料抄进随身小本=结构化笔记（Agentic Memory）。</li>
+      </ol>
+    </div>
+  </details>
+</section>
+
+<div class="footer" data-page-node-id="lEfZhWuUaAGhWueGOWQK4b">生成于 2026-09-06 · concept-learning-generator 技能 · 依据 Agent Skills 标准与 Anthropic 工程博客整理，细节以官方文档最新版为准 · 仅用于课程学习</div>
+
+</div>
+
+
+</body></html>
